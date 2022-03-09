@@ -1,0 +1,7 @@
+mixin ico_svg(params)
+	- icon = params.icon;
+	- size = params.size || 'sm';
+	- theme = params.theme || 'inherit';
+
+	svg(viewBox='0 0 24 24', class=`ico_svg ico_svg--${size} ico_svg--${theme}`)&attributes(attributes)
+		path(fill='currentColor' d=icon)

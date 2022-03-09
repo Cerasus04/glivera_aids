@@ -1,0 +1,33 @@
+mixin header
+	header.header
+		.header__logo
+			+logo({
+				img : 'logo',
+				type : 'png',
+				href : '#',
+				label : 'logo',
+				width : '113',
+				height : '22',
+				altText : 'Aid logo'
+			})
+			p.header__logo-text Global dataset on HIV epidemiology and response
+		.header__menu
+			+menu({
+				gl_class: 'nav',
+				gl_mod : 'header',
+				items: [
+					{
+					'url' : '#',
+					'title' : 'Indicators catalogue'
+					},
+					{
+					'url' : '#',
+					'title' : 'report builder'
+					}]
+			})
+			+btn_change({
+				text: 'english'
+			})
+				+ico_svg({
+					icon: 'M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z'
+				})
