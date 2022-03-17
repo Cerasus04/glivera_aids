@@ -22,7 +22,16 @@
 }
 
 .section_in {
-	max-width: $page_width;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 1rem;
+
+	@include bp($point_4, min) {
+		padding: 0 2rem;
+	}
+
+	@include bp($point_2, min) {
+		padding: 0;
+		max-width: $page_width;
+	}
 }

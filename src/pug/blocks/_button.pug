@@ -1,0 +1,8 @@
+mixin button(data)
+	- el_class = data.el_class;
+	- type = data.type || 'button';
+	- text = data.text || ''
+	- ariaLabel = data.ariaLabel;
+
+	button(class=el_class aria-label=ariaLabel type=type)&attributes(attributes)= text
+		block

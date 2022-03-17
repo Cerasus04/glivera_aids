@@ -13,6 +13,17 @@ mixin header
 						altText : 'Aid logo'
 					})
 					p.header__logo-text Global dataset on HIV epidemiology and response
+				.header__mobile_panel
+					+button({
+						el_class: 'header__search_btn',
+						ariaLabel: 'Search button'
+					})
+						+icon('search', '')
+					+button({
+						el_class: 'header__burger_btn',
+						ariaLabel: 'Menu open'
+					})
+						+icon('burger', '')
 				.header__menu
 					+menu({
 						gl_class: 'nav',
@@ -22,8 +33,10 @@ mixin header
 							{title : 'report builder'}
 						]
 					})
-					+btn_change({
-						text: 'english'
+					+button({
+						el_class: 'header__language_btn',
+						text: 'english',
+						ariaLabel: 'Change language'
 					})
 						+icon('arrow_sm', '')
 					+menu({
