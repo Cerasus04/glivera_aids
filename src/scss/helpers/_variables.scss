@@ -1,6 +1,6 @@
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'RobotoCondensed', sans-serif;
+$font_1: 'Avenir', 'Arial', sans-serif;
 $font_size_base: 1.6rem;
 //---------------------------------------------fonts###
 
@@ -9,8 +9,21 @@ $white: #fff;
 $black: #000;
 
 $color_text_base: $black;
-$color_link_base:#4aa3df;
+$color_text_inner: #333333;
+$color_text_light: #808284;
+$color_link_base: #4aa3df;
+
+$color_accent: #E31837;
+$color_transparent: rgba(0, 0, 0, 0.1);
+
+// bg
 $body_bg: $white;
+$color_bg_header: $white;
+$color_devider: #F0F0F0;
+$color_bg_base: #808284;
+$color_bg_inner: #CDC9C9;
+$color_bg_footer_light: #F6F6F6;
+$color_bg_footer_dark: #4B4B4B;
 //---------------------------------------------colors###
 
 //---------------------------------------------z-index
