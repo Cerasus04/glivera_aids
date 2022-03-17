@@ -33,20 +33,22 @@ mixin header
 							{title : 'report builder'}
 						]
 					})
-					+button({
-						el_class: 'header__language_btn',
-						text: 'english',
-						ariaLabel: 'Change language'
-					})
-						+icon('arrow_sm', '')
-					+menu({
-						gl_class: 'language',
-						items: [{ title: 'english', active: true }, { title: 'ukrainian' }, { title: 'polish' }, { title: 'germany' }],
-					})
+					.language
+						+button({
+							el_class: 'language__btn',
+							text: 'english',
+							ariaLabel: 'Change language'
+						})
+							+icon('arrow_sm', '')
+						+menu({
+							gl_class: 'language',
+							items: [{ title: 'english', active: true }, { title: 'ukrainian' }, { title: 'polish' }, { title: 'germany' }],
+						})
 			.header__bottom
 				nav.header__nav
 					+menu({ 
-						gl_class: 'header_nav', 
+						gl_class: 'nav',
+						gl_mod : 'bottom', 
 						items: [
 							{ title: 'Fact sheets'},
 							{ title: 'Epidemic & response'},

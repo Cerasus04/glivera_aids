@@ -1,0 +1,55 @@
+.language {
+	position: relative;
+	margin-right: 4rem;
+	cursor: pointer;
+	height: 100%;
+	line-height: 5rem;
+}
+
+.language__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	& .icon {
+		width: .8rem; 
+		height: .8rem; 
+	}
+}
+
+.language__list {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translate(-1rem, 9rem);
+	display: none;
+}
+
+.language__list--visible_mod {
+	display: block;
+}
+
+.language__item {
+	width: 10rem;
+	height: 3rem;
+	line-height: 3rem;
+	
+	background: #F0F0F0;
+}
+
+.language__item--active_mod {
+	display: none;
+}
+
+.language__link {
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding-left: 1rem;
+	cursor: pointer;
+	
+	&:hover {
+		color: $white;
+		background: $color_accent;
+	}
+}
