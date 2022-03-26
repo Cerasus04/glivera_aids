@@ -1,19 +1,21 @@
 .language {
 	position: relative;
-	margin-right: 4rem;
-	cursor: pointer;
 	height: 100%;
 	line-height: 5rem;
+	cursor: pointer;
 }
 
 .language__btn {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
+	color: $color_text_light;
+	text-transform: uppercase;
 
 	& .icon {
 		width: .8rem; 
 		height: .8rem; 
+		margin-left: 2.5rem;
 	}
 }
 

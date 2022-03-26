@@ -1,0 +1,40 @@
+.nav__list {
+	display: flex;
+	flex-direction: column;
+
+	@include bp($point_4, min) {
+		flex-direction: row;
+		flex-wrap: wrap;		
+	}
+}
+.nav__list--header {
+	color: $color_text_light;
+	
+	.nav__item {
+		@include bp($point_2, min) {
+			margin-right: 4.5rem;
+		}
+	}
+	.nav__link {
+		letter-spacing: 0.05rem;
+	}
+}
+.nav__list--bottom {
+	color: $black;
+
+	@include bp($point_2, min) {
+		justify-content: flex-start;
+		column-gap: 5.5rem;
+	}
+	.nav__item {
+
+	}
+	.nav__link {
+		letter-spacing: 0.15rem;
+	}
+}
+
+.nav__link {
+	color: inherit;
+	text-transform: uppercase;
+}
