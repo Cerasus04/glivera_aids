@@ -83,3 +83,12 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 //------------------------------------------------------------base styles###
+
+.page {
+	position: relative;
+	width: 100%;
+	display: grid;
+  grid-template-rows: min-content min-content min-content;
+	margin: 0 auto;	
+	min-height: 100%;
+}

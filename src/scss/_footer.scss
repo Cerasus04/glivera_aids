@@ -1,8 +1,47 @@
 .footer {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
-	flex: 0 0 auto;
+	border-top: 2px solid $color_accent;
+}
+.footer__top {
+	padding: 3.3rem 0;
+}
+.footer__top {
+	& .section_in {
+		display: flex;
+		align-items: center;
+	}
+}
+.footer__logo {
+	display: none;
+}
+.footer__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 
-	font-size: 1rem;
+	@include bp($point_2, min) {
+		justify-content: flex-end;
+	}
+}
+.footer__contact {
+	background-color: $color_bg_footer_light;
+}
+.footer__info {
+	background-color: $color_bg_footer_dark;
+}
+.footer__list_text {
+	display: none;
 
-	will-change: transform;
+	@include bp($point_2, min) {
+		display: block;
+		margin-right: 3.75rem;
+	}
+}
+@include bp($point_2, min) {
+	.footer__logo {
+		display: block;
+	}
 }

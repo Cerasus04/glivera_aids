@@ -58,7 +58,7 @@
 
 .header__bottom {
 	display: none;
-	padding: 1.8rem 1.25rem;
+	padding: 1.8rem 0;
 }
 .header__nav {
 	width: 100%;
@@ -70,7 +70,7 @@
 	}
 	.header__top,
 	.header__bottom {
-		padding: 2rem 3rem;
+		padding: 2rem 0;
 	}
 }
 
@@ -79,7 +79,7 @@
 		border-top: 2px solid $color_accent;
 	}
 	.header__top {
-		padding: 2rem 6rem 1rem;
+		padding: 2rem 0 1rem;
 		border-bottom: 1px solid $color_transparent;
 	}
 	.header__logo_text {
@@ -97,7 +97,7 @@
 	}
 	.header__bottom {
 		display: block;
-		padding: 2rem 6rem 1rem;
+		padding: 2rem 0 1rem;
 	}
 }
 
@@ -128,12 +128,12 @@
 	.header__bottom {
 		display: block;
 		order: -1;
-		padding: 12.5rem 3rem 0;		
+		padding: 12.5rem 0 0;		
 	}
 	.header__top {
 		justify-content: flex-start;
 		padding: 0;
-		padding: 1.5rem 3rem;
+		padding: 1.5rem 0;
 	}
 	
 	.header__menu {

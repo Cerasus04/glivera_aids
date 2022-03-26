@@ -1,2 +1,50 @@
 mixin footer
 	footer.footer
+		.footer__top
+			.section_in
+				.footer__logo
+					+logo({
+							img : 'logo',
+							type : 'png',
+							href : '#',
+							label : 'logo',
+							width : '113',
+							height : '22',
+							altText : 'Aid logo'
+						})
+				.footer__list
+					p.footer__list_text A collaboration of
+					+list({
+						list_class : 'org_list',
+						list : [{
+							img : 'unaids',
+							imgType : 'png', 
+							alt : 'unaids'	},
+							{
+							img : 'unicef',
+							imgType : 'png', 
+							alt : 'unicef'	},
+							{
+							img : 'organization',
+							imgType : 'png', 
+							alt : 'organization'	}
+							]		
+					})
+		.footer__contact
+			.section_in
+				+menu({
+						gl_class: 'contact',
+						items: [
+							{title : 'about'},
+							{title : 'contact'}
+						]
+					})
+				+social({
+					mod_block: 'social_list--footer',
+					items: [
+					{name_icon: 'facebook'},
+					{name_icon: 'twitter'},
+					{name_icon: 'instagram'}]
+				})
+		.footer__info
+			.section_in

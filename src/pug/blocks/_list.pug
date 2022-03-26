@@ -1,0 +1,13 @@
+mixin list(data)
+	- list_class = data.list_class
+	ul(class=list_class)
+		each item in data.list
+			- img = item.img
+			- imgType = item.imgType	
+			- title = item.title || ''
+			- href = item.href ||  ''
+			- src = item.src
+			- alt = item.alt
+			
+			li(class=list_class + '__item'): a(class=list_class + '__link' href=href)= title
+				img(class=list_class + '__img' src=assetsImage + img + '.' + imgType alt=alt)

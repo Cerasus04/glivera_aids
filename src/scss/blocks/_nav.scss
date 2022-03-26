@@ -5,7 +5,7 @@
 
 	@include bp($point_2, min) {
 		flex-direction: row;
-		flex-wrap: wrap;		
+		flex-wrap: wrap;	
 	}
 }
 .nav__list--header {	
@@ -16,6 +16,7 @@
 		@include bp($point_2, min) {
 			color: $color_text_light;
 			margin-right: 4.5rem;
+			margin-bottom: 0;
 		}
 	}
 	.nav__link {

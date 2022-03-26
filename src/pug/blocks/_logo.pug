@@ -1,11 +1,11 @@
-mixin logo(params)
-	- img = params.img;
-	- type = params.type;
-	- href = params.href;
-	- label = params.label;
-	- width = params.width;
-	- height = params.height;
-	- altText = params.altText;
+mixin logo(data)
+	- img = data.img;
+	- type = data.type;
+	- href = data.href;
+	- label = data.label;
+	- width = data.width;
+	- height = data.height;
+	- altText = data.altText;
 
 	a(class='logo' href=href aria-label=label)&attributes(attributes)
 		img(src=`${assetsImage}${img}.${type}` width=width height=height alt=altText)

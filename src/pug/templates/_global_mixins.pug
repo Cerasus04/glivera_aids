@@ -125,13 +125,13 @@ mixin breadcrumbs(array,add_class)
 					a.breadcrumbs_link(href= crumb.url)= crumb.text
 
 //- works
-mixin menu(params)
-	- gl_mod = params.gl_mod || ''
-	ul(class=`${params.gl_class}__list ${gl_mod ? `${params.gl_class}__list--${gl_mod}` : ''}`)
-		each item in params.items
+mixin menu(data)
+	- gl_mod = data.gl_mod || ''
+	ul(class=`${data.gl_class}__list ${gl_mod ? `${data.gl_class}__list--${gl_mod}` : ''}`)
+		each item in data.items
 			- url = item.url || '#'
-			li(class= `${params.gl_class}__item ${item.active ? `${params.gl_class}__item--active_mod` : ''}`)
-				a(href= url class= `${params.gl_class}__link`)= item.title
+			li(class= `${data.gl_class}__item ${item.active ? `${data.gl_class}__item--active_mod` : ''}`)
+				a(href= url class= `${data.gl_class}__link`)= item.title
 
 //- mixin menu(menuArray)
 //- 	- gl_mod = menuArray.gl_mod || ''
@@ -147,8 +147,8 @@ mixin social(socialArray)
 	ul.social_list(class= `${mod_block}`)
 		each item in socialArray.items
 			- mod_link = item.mod_link || ''
-			li.social_item
-				a.social_link(href="#" class= `${mod_link}`)
+			li.social_list__item
+				a.social_list__link(href="#" class= `${mod_link}`)
 					+icon(item.name_icon, item.mod_icon)
 
 //- works

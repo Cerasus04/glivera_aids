@@ -1,0 +1,9 @@
+.social_list {
+	display: flex;
+	justify-content: flex-end;
+	column-gap: 2.5rem;
+}
+.social_list__link {
+	display: block;
+	color: $black;
+}
