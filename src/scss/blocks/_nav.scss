@@ -1,17 +1,20 @@
 .nav__list {
 	display: flex;
 	flex-direction: column;
+	color: $white;
 
-	@include bp($point_4, min) {
+	@include bp($point_2, min) {
 		flex-direction: row;
 		flex-wrap: wrap;		
 	}
 }
-.nav__list--header {
-	color: $color_text_light;
-	
+.nav__list--header {	
+	.nav__item {
+		margin-bottom: 2.4rem;
+	}
 	.nav__item {
 		@include bp($point_2, min) {
+			color: $color_text_light;
 			margin-right: 4.5rem;
 		}
 	}
@@ -20,17 +23,22 @@
 	}
 }
 .nav__list--bottom {
-	color: $black;
+	.nav__item {
+		margin-bottom: 2.6rem;
+	}
+	.nav__link {
+		font-size: 1.2rem;
+		letter-spacing: 0.2rem;
 
+		@include bp($point_2, min) {
+			letter-spacing: 0.15rem;
+		}
+	}
+	
 	@include bp($point_2, min) {
 		justify-content: flex-start;
 		column-gap: 5.5rem;
-	}
-	.nav__item {
-
-	}
-	.nav__link {
-		letter-spacing: 0.15rem;
+		color: $black;
 	}
 }
 

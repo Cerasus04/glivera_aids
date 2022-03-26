@@ -12,7 +12,7 @@ mixin header
 						height : '22',
 						altText : 'Aid logo'
 					})
-					p.header__logo-text Global dataset on HIV epidemiology and response
+					p.header__logo_text Global dataset on HIV epidemiology and response
 				.header__mobile_panel
 					+button({
 						el_class: 'header__search_btn',
@@ -24,6 +24,11 @@ mixin header
 						ariaLabel: 'Menu open'
 					})
 						+icon('burger', '')
+					+button({
+						el_class: 'header__close_btn',
+						ariaLabel: 'Menu close'
+					})
+						+icon('close', '')
 				.header__menu
 					+menu({
 						gl_class: 'nav',
