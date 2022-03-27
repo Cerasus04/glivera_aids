@@ -1,6 +1,13 @@
 .org_list {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	column-gap: 2.5rem;
+	flex-direction: column;
+	row-gap: 1rem;
+
+	@include bp($point_4, min) {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		column-gap: 2.5rem;
+		row-gap: unset;
+	}
 }

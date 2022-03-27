@@ -1,0 +1,11 @@
+.link_list {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1.5rem;
+	row-gap: 1.5rem;
+}
+
+.link_list__link {
+	font-size: 1rem;
+	color: $white;
+}

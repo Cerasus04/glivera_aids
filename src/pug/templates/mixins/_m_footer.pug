@@ -12,7 +12,7 @@ mixin footer
 							height : '22',
 							altText : 'Aid logo'
 						})
-				.footer__list
+				.footer__org_list
 					p.footer__list_text A collaboration of
 					+list({
 						list_class : 'org_list',
@@ -33,7 +33,7 @@ mixin footer
 		.footer__contact
 			.section_in
 				+menu({
-						gl_class: 'contact',
+						gl_class: 'footer',
 						items: [
 							{title : 'about'},
 							{title : 'contact'}
@@ -48,3 +48,16 @@ mixin footer
 				})
 		.footer__info
 			.section_in
+				.footer__copyrigh
+					p.footer__copyright_text Copyright © 2020
+					a.footer__copyright_link Unaids
+				.footer__violations
+					+links([
+						{
+						textLink: 'Report fraud'
+						},{
+						textLink: 'Scam alert'
+						},{
+						textLink: 'Terms of use'
+						}
+					])(class='link--footer')
