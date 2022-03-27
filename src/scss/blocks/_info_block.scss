@@ -63,12 +63,11 @@
 		padding: 3rem 0;
 	}
 	.info_block__wrap {
-		padding: 0 6rem;
+		padding: 3rem 6rem;
 		width: calc(100% - 4rem);
 		margin: 3rem auto;
 	}
 }
-
 @include bp($point_2, min) {
 	.info_block {
 		padding: 3rem 0;

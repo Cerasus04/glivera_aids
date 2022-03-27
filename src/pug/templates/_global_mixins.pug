@@ -192,8 +192,9 @@ mixin picture(data)
 	//- - imgFit = data.contain ? 'contain_img' : 'cover_img'
 	//- - customClass = data.customClass || imgFit
 	//- - mediaArray = (environment === 'production') ? ['webp', type] : [type];
-	- typeJpeg = 'png'
-	- type = data.png ? 'png' : typeJpeg
+	
+	- typeJpeg = false,
+	- type = 'png' 
 	- is2x = true
 	- media = false
 	- imgFit = 'contain_img'

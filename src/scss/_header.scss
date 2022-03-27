@@ -107,6 +107,8 @@
 	background-color: $color_accent;
 	min-height: 100vh;
 	overflow-y: hidden;
+	display: flex;
+	flex-direction: column;
 
 	.header__logo {
 		display: none;
@@ -133,7 +135,7 @@
 	.header__top {
 		justify-content: flex-start;
 		padding: 0;
-		padding: 1.5rem 0;
+		padding: 1.5rem 0 12rem;
 	}
 	
 	.header__menu {

@@ -1,0 +1,15 @@
+mixin slider(data)
+	.slider_section__header
+		.slider_section__title= data.title
+		.slider_section__description= data.description
+	
+	ul.slider_section__list
+		each item, index in data.items
+			li(class= `slider_section__item slider_section__item--${index + 1} collapse_mod`)
+				.slider_section__item_text_block
+					.slider_section__item_title= item.title
+					.slider_section__item_description= item.descr
+					a.slider_section__item_link(href='#')
+						+icon('arrow_lg')
+
+		

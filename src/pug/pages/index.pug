@@ -3,7 +3,35 @@ extends ../layout/_layout
 block vars
 	- array = {body_class:'page', layout_mod:'', sub_keywords:'', title_inner:'Aid'}
 block content_block
-	.info_block
+	section.slider_section
+		+slider({
+			title: 'AIDSinfo',
+			description: 'UNAIDS leads the world’s most extensive data collection on HIV epidemiology, programme coverage and finance and publishes the most authoritative and up-to-date information on the HIV epidemic.',
+			items: [
+				{
+					title: 'Fact sheets',
+					descr: 'Global, regional, and country key facts and figures on HIV & AIDS.',
+				},
+				{
+					title: 'Epidemic & Response',
+					descr: 'HIV epidemiological estimates and country-reported data on their national AIDS response.',
+				},
+				{
+					title: 'key population',
+					descr: 'Data on sex workers, men who have sex with men, people who inject drugs, transgender people, and prisoners a for local-level action for policy-makers, program directors, community activists and advocates among others.',
+				},
+				{
+					title: 'finance',
+					descr: 'More than 85 different indicators on HIV financial resources submitted through Global AIDS Monitoring and triangulated with HIV and Health financial resources from other agencies, aiming to provide strategic information for policy-makers, program directors and researchers.',
+				},
+				{
+					title: 'Laws & Policies',
+					descr: 'HIV-related laws and policies data in countries, reported by both national authorities and civil society to UNAIDS and WHO, aimed at promoting accountability and support joint analysis of policy information with other relevant data to inform national AIDS response. HIV-related laws and policies data in countries, reported by both national authorities and civil society to UNAIDS and WHO, aimed at promoting accountability and support joint analysis of policy information with other relevant data to inform national AIDS response.',
+				},
+			],
+		})
+	section.info_block
+		h2.visually-hidden Information
 		.info_block__wrap
 			+title({
 				text: 'search data'
@@ -40,14 +68,11 @@ block content_block
 						textLink: 'Budget for HIV and AIDS programmes from domestic public sources <span>Global</span>'
 						},{
 						textLink: 'Elimination of mother-to-child transmission <span>Asia & Pacific</span>'
-						},{
-						textLink: 'Elimination of mother-to-child transmission <span>Asia & Pacific</span>'
-						},{
-						textLink: 'Elimination of mother-to-child transmission <span>Asia & Pacific</span>'
 						}
 					])(class='link_list--info')
 				a.info_block__link(href='#') view more				
-	.posts_block
+	section.posts_block 
+		h2.visually-hidden View popular public
 		.section_in
 			+title({
 				text: 'popular publications'
@@ -59,7 +84,8 @@ block content_block
 				{img: 'public4'}
 			])
 			a.posts_block__link(href='#') view all		
-	.resources_block
+	section.resources_block
+		h2.visually-hidden Resources
 		.section_in
 			+title({
 				text: 'Recommended resources'

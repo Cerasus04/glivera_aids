@@ -26,7 +26,25 @@ $color_bg_base: #808284;
 $color_bg_inner: #F0F0F0;
 $color_bg_footer_light: #F6F6F6;
 $color_bg_footer_dark: #4B4B4B;
-//---------------------------------------------colors###
+
+$color_slider_1: rgba(226, 24, 54, 1);
+$color_slider_2: rgba(161, 18, 39, 1);
+$color_slider_3: rgba(205, 200, 132, 1);
+$color_slider_4: rgba(97, 203, 245, 1);
+$color_slider_5: rgba(244, 126, 87, 1);
+//---------------------------------------------img###
+
+$img_path: "../images/";
+$item_1: $img_path + 'slide1.jpg';
+$item_2: $img_path + 'slide2.jpg';
+$item_3: $img_path + 'slide3.jpg';
+$item_4: $img_path + 'slide4.jpg';
+$item_5: $img_path + 'slide5.jpg';
+$collaps_1: $img_path + 'slide1_collaps.jpg';
+$collaps_2: $img_path + 'slide2_collaps.jpg';
+$collaps_3: $img_path + 'slide3_collaps.jpg';
+$collaps_4: $img_path + 'slide4_collaps.jpg';
+$collaps_5: $img_path + 'slide5_collaps.jpg';
 
 //---------------------------------------------z-index
 $z-index: (
