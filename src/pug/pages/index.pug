@@ -3,4 +3,73 @@ extends ../layout/_layout
 block vars
 	- array = {body_class:'page', layout_mod:'', sub_keywords:'', title_inner:'Aid'}
 block content_block
-	
+	.info_block
+		.info_block__wrap
+			+title({
+				text: 'search data'
+			})
+			.info_block__form
+				+button({
+					el_class: 'info_block__filter',
+					ariaLabel: 'filter button'
+				})
+					+icon('filter', '')
+				+button({
+					el_class: 'info_block__search',
+					ariaLabel: 'search button'
+				})
+					+icon('search', '')
+				+form_input({				
+					blockClass: 'form_search',
+					label : true,
+					labelClass : 'visually-hidden',
+					labelText : 'search info',
+					inputType: 'search',
+					elClass: 'form_search__input',
+					id : 'form_search',
+					name : 'search_input',
+					placeholder: 'e.g. HIV prevalence, sex workers, South Africa'
+				})
+			.info_block__descr
+				h3.info_block__subtitle popular searches
+				.info_block__links
+					+links([
+						{
+						textLink: 'HIV prevalence among sex workers <span>Eastern and Souther Africa</span>'
+						},{
+						textLink: 'Budget for HIV and AIDS programmes from domestic public sources <span>Global</span>'
+						},{
+						textLink: 'Elimination of mother-to-child transmission <span>Asia & Pacific</span>'
+						},{
+						textLink: 'Elimination of mother-to-child transmission <span>Asia & Pacific</span>'
+						},{
+						textLink: 'Elimination of mother-to-child transmission <span>Asia & Pacific</span>'
+						}
+					])(class='link_list--info')
+				a.info_block__link(href='#') view more				
+	.posts_block
+		.section_in
+			+title({
+				text: 'popular publications'
+			})
+			+post_list([
+				{img: 'public1'},
+				{img: 'public2'},
+				{img: 'public3'},
+				{img: 'public4'}
+			])
+			a.posts_block__link(href='#') view all		
+	.resources_block
+		.section_in
+			+title({
+				text: 'Recommended resources'
+			})
+			+menu({
+				gl_class: 'resources_block',
+				items: [
+					{title :'<span class="resources_block__text">Core <span class="resources_block__accent">epidemiology</span> slides</span><span class="resources_block__event">July 2020</span>'},
+					{title :'<span class="resources_block__text">Global <span class="resources_block__accent">HIV & AIDS</span> statistics</span><span class="resources_block__event">2020 Fact sheet</span>'},
+					{title :'<span class="resources_block__text"><span class="resources_block__accent">Seizing</span> the moment</span><span class="resources_block__event">Global AIDS update 2020</span>'},
+					{title :'<span class="resources_block__text"><span class="resources_block__accent">HIV epidemological</span> estimates spreadsheet</span><span class="resources_block__event">2020 Fact sheet</span>'},
+				]
+			})

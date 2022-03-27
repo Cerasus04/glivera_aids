@@ -9,3 +9,40 @@
 	font-size: 1rem;
 	color: $white;
 }
+
+.link_list--info {
+	display: -webkit-box;
+	word-wrap: break-word;
+	word-break: break-word;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	
+	& .link_list__link {
+		position: relative;
+		display: block;
+		font-family: $font_2;
+		padding-left: 3rem;
+		padding-bottom: 1rem;
+		font-size: 1.25rem;
+		font-weight: 400;
+
+		& span {
+			padding-left: 1rem;
+			opacity: 0.5;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0.3rem;
+			left: 0;
+			width: 1.5rem;
+			height: 0.5rem;
+			background-image: url('../images/icons/arrow_lg.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+}

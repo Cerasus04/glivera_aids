@@ -131,7 +131,7 @@ mixin menu(data)
 		each item in data.items
 			- url = item.url || '#'
 			li(class= `${data.gl_class}__item ${item.active ? `${data.gl_class}__item--active_mod` : ''}`)
-				a(href= url class= `${data.gl_class}__link`)= item.title
+				a(href= url class= `${data.gl_class}__link`) !{item.title}
 
 //- mixin menu(menuArray)
 //- 	- gl_mod = menuArray.gl_mod || ''
@@ -185,13 +185,21 @@ mixin pagination(config)
 
 //- picture
 mixin picture(data)
-	- typeJpeg = data.typeJpeg ? 'jpeg' : 'jpg'
+	//- - typeJpeg = data.typeJpeg ? 'jpeg' : 'jpg'
+	//- - type = data.png ? 'png' : typeJpeg
+	//- - is2x = data.is2x ? true : false
+	//- - media = data.media
+	//- - imgFit = data.contain ? 'contain_img' : 'cover_img'
+	//- - customClass = data.customClass || imgFit
+	//- - mediaArray = (environment === 'production') ? ['webp', type] : [type];
+	- typeJpeg = 'png'
 	- type = data.png ? 'png' : typeJpeg
-	- is2x = data.is2x ? true : false
-	- media = data.media
-	- imgFit = data.contain ? 'contain_img' : 'cover_img'
+	- is2x = true
+	- media = false
+	- imgFit = 'contain_img'
 	- customClass = data.customClass || imgFit
 	- mediaArray = (environment === 'production') ? ['webp', type] : [type];
+
 	picture(class = data.class)
 		each imgType in mediaArray
 			if media

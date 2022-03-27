@@ -1,0 +1,5 @@
+mixin post_list(data)
+	ul.post_list
+		each item in data
+			a.post_list__link
+				+picture(item)

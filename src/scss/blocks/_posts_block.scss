@@ -1,0 +1,39 @@
+.posts_block {	
+	padding: 3rem 0;
+	min-height: 430px;
+  background: linear-gradient(180deg, $color_bg_inner 70%, transparent 50%);
+	color: $black;
+}
+.posts_block {
+	.section_in {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+.posts_block__link {
+	align-self: flex-end;
+	font-family: $font_2;
+	font-size: 1rem;
+	line-height: 2rem;
+	letter-spacing: -0.04rem;
+	text-transform: uppercase;
+	color: inherit;
+	cursor: pointer;
+}
+@include bp($point_4, min) {
+	.posts_block {
+		background: linear-gradient(180deg, $color_bg_inner 50%, transparent 50%);
+	}	
+	.posts_block {
+		.section_in {
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;	
+			justify-content: space-between;		
+		}
+	}
+	.posts_block__link {
+		font-size: 1.2rem;
+	}
+}

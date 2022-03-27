@@ -1,4 +1,4 @@
 mixin links(data)
-	.link_list
+	.link_list&attributes(attributes)
 		each item in data
-			a.link_list__link&attributes(attributes)= item.textLink
+			a.link_list__link !{item.textLink}

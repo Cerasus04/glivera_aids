@@ -1,0 +1,14 @@
+.title {
+	font-size: 1.3rem;
+	font-weight: 400;
+	letter-spacing: -0.05rem;
+	font-family: $font_1;
+	line-height: 2rem;
+	text-transform: uppercase;
+	color: inherit;
+}
+@include bp($point_2, min) {
+	.title{
+		font-size: 2rem;
+	}
+}

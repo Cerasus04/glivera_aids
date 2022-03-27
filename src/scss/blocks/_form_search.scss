@@ -1,0 +1,18 @@
+.form_search__input{
+	display: block;
+	width: 100%;
+	height: $input_height;
+	padding: 0 4.5rem 0 2rem;
+	font-size: $input_font_size;
+	font-family: $font_1;
+	color: $input_text_color;
+	border: none;
+	box-shadow: 0.1rem 0.1rem 0.5rem $color_bg_footer_dark;
+}
+.form_search {
+	position: relative;
+	margin: 1.5rem 0 2.6rem;
+}
+.form_search__input[type='search'] {
+	color: $color_text_base;
+}
