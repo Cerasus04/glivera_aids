@@ -1,0 +1,12 @@
+mixin slider(data)
+	.slider_section
+		.slider_section__wrapper
+			each item in data.items
+				.slider_section__slide(class=item.active ? 'active' : '')
+					.slider_section__image
+						+picture({img: item.bg})
+					.slider_section__descr
+						h2.slider_section__descr_title= item.title
+						p.slider_section__descr_text= item.descr
+						a(href='#').slider_section__link
+							+icon('arrow_lg')

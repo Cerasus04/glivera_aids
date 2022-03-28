@@ -185,19 +185,10 @@ mixin pagination(config)
 
 //- picture
 mixin picture(data)
-	//- - typeJpeg = data.typeJpeg ? 'jpeg' : 'jpg'
-	//- - type = data.png ? 'png' : typeJpeg
-	//- - is2x = data.is2x ? true : false
-	//- - media = data.media
-	//- - imgFit = data.contain ? 'contain_img' : 'cover_img'
-	//- - customClass = data.customClass || imgFit
-	//- - mediaArray = (environment === 'production') ? ['webp', type] : [type];
-	
 	- typeJpeg = false,
 	- type = 'png' 
-	- is2x = true
+	- is2x = false
 	- media = false
-	- imgFit = 'contain_img'
 	- customClass = data.customClass || imgFit
 	- mediaArray = (environment === 'production') ? ['webp', type] : [type];
 

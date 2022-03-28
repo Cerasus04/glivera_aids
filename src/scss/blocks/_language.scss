@@ -2,7 +2,6 @@
 	position: relative;
 	height: 100%;
 	line-height: 5rem;
-	cursor: pointer;
 }
 
 .language__btn {
@@ -11,6 +10,7 @@
 	justify-content: flex-end;
 	text-transform: uppercase;
 	color: $white;
+	cursor: pointer;
 
 	& .icon {
 		width: .8rem; 

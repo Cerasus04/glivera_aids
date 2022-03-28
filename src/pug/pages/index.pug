@@ -3,33 +3,43 @@ extends ../layout/_layout
 block vars
 	- array = {body_class:'page', layout_mod:'', sub_keywords:'', title_inner:'Aid'}
 block content_block
-	section.slider_section
-		+slider({
-			title: 'AIDSinfo',
-			description: 'UNAIDS leads the world’s most extensive data collection on HIV epidemiology, programme coverage and finance and publishes the most authoritative and up-to-date information on the HIV epidemic.',
+	section.slider
+		.slider__text
+			h1.slider__title AIDSinfo
+			p.slider__descr UNAIDS leads the world’s most extensive data collection on HIV epidemiology, programme coverage and finance and publishes the most authoritative and up-to-date information on the HIV epidemic.
+		+slider({			
 			items: [
 				{
 					title: 'Fact sheets',
 					descr: 'Global, regional, and country key facts and figures on HIV & AIDS.',
+					bg: 'slide1',
+					active: true
 				},
 				{
 					title: 'Epidemic & Response',
 					descr: 'HIV epidemiological estimates and country-reported data on their national AIDS response.',
+					bg: 'slide2',
 				},
 				{
 					title: 'key population',
 					descr: 'Data on sex workers, men who have sex with men, people who inject drugs, transgender people, and prisoners a for local-level action for policy-makers, program directors, community activists and advocates among others.',
+					bg: 'slide3',
 				},
 				{
 					title: 'finance',
 					descr: 'More than 85 different indicators on HIV financial resources submitted through Global AIDS Monitoring and triangulated with HIV and Health financial resources from other agencies, aiming to provide strategic information for policy-makers, program directors and researchers.',
+					bg: 'slide4',
 				},
 				{
 					title: 'Laws & Policies',
-					descr: 'HIV-related laws and policies data in countries, reported by both national authorities and civil society to UNAIDS and WHO, aimed at promoting accountability and support joint analysis of policy information with other relevant data to inform national AIDS response. HIV-related laws and policies data in countries, reported by both national authorities and civil society to UNAIDS and WHO, aimed at promoting accountability and support joint analysis of policy information with other relevant data to inform national AIDS response.',
+					descr: 'HIV-related laws and policies data in countries, reported by both national authorities and civil society to UNAIDS and WHO, aimed at promoting accountability and support joint analysis of policy information with other relevant data to inform national AIDS response.',
+					bg: 'slide5',
 				},
 			],
 		})
+		+controls([
+			{id: '1', current: true},{id: '2'},{id: '3'},{id: '4'},{id: '5'}
+		])
 	section.info_block
 		h2.visually-hidden Information
 		.info_block__wrap
