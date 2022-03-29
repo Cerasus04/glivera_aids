@@ -26,17 +26,36 @@
 }
 
 @include bp($point_4, min) {
+	.slider__title {
+		font-size: 5rem;
+		color: inherit;
+	}
+	.slider__descr {
+		font-size: 1.5rem;
+		color: inherit;
+	}
 	.slider__text {
 		padding: 5rem 3rem;
 	}
 }
 
 @include bp($point_2, min) {
+	.slider {
+		max-width: $page_width;
+		margin: 0 auto;
+	}
+	.slider__title {
+		width: 75rem;
+		font-weight: 300;
+	}
+	.slider__descr {
+		width: 62rem;
+	}
 	.slider__text {
 		position: absolute;
 		top: 0;
 		left: 0;
-		max-width: 62rem;
+		max-width: 100%;
 		color: $white;
 		padding: 9.6rem 6.6rem;
 	}

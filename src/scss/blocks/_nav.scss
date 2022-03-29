@@ -26,6 +26,10 @@
 .nav__list--bottom {
 	.nav__item {
 		margin-bottom: 2.6rem;
+
+		@include bp($point_2, min) {
+			margin-bottom: 0;
+		}
 	}
 	.nav__link {
 		font-size: 1.2rem;
@@ -33,6 +37,7 @@
 
 		@include bp($point_2, min) {
 			letter-spacing: 0.15rem;
+			font-size: 1rem;
 		}
 	}
 	

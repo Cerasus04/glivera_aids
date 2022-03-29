@@ -13,7 +13,7 @@
 	font-size: 1.7rem;
 	font-family: $font_3;
 	color: inherit;
-	cursor: point;
+	cursor: pointer;
 }
 .resources_block__text {
 	margin-bottom: 1rem;
@@ -50,5 +50,11 @@
 			background-position: center;
 			background-size: cover;
 		}
+	}
+	.resources_block__link {
+		font-size: 2.5rem;
+	}
+	.resources_block__event {
+		font-size: 1.2rem;
 	}
 }

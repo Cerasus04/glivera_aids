@@ -71,6 +71,12 @@
 	.slider_section__descr {
 		padding: 5rem 3rem;
 	}
+	.slider_section__descr_title {
+		font-size: 2.4rem;
+	}
+	.slider_section__descr_text {
+		font-size: 2rem;		
+	}
 }
 @include bp($point_2, min) {
 	.slider_section {
@@ -82,6 +88,7 @@
 		min-width: unset;
 	}
 	.slider_section__link {
+		display: none;
 		width: 1.5rem;
 		height: 1rem;
 		align-self: unset;
@@ -89,5 +96,116 @@
 		& .icon {
 			transform: unset;
 		}
+	}
+	.slider_section {
+		position: relative;
+		margin: 0 auto;
+		max-width: 1440px;
+		/* $page_width */
+		height: 50rem;
+		overflow: hidden;
+	
+		color: white;
+	}
+	
+	.slider_section__wrapper {
+		display: flex;
+		justify-content: center;
+		padding: 0;
+	}
+	
+	.slider_section__wrapper .slider_section__slide {
+		width: 16rem;
+		overflow: hidden;
+		cursor: pointer;
+		display: block;
+		position: relative;
+	}
+	
+	.slider_section__wrapper img {
+		width: 57rem;
+	}
+	
+	.slider_section__wrapper .slider_section__slide:hover,
+	.slider_section__wrapper .slider_section__slide:active {
+		width: 57rem;
+		.slider_section__descr_text {
+			display: block;
+		}
+		.slider_section__descr_title {
+			font-size: 2.4rem;
+		}
+		.slider_section__descr {
+			padding: 6.5rem 2.5rem 5rem;
+		}
+		.slider_section__link {
+			display: block;
+		}
+	}
+	
+	.slider_section__wrapper .slider_section__slide:nth-child(1) {
+		width: 57rem;
+		.slider_section__descr_text {
+			display: block;
+		}
+		.slider_section__descr_title {
+			font-size: 2.4rem;
+		}
+		.slider_section__descr {
+			padding: 6.5rem 2.5rem 5rem;
+		}
+		.slider_section__link {
+			display: block;
+		}
+	}
+	
+	.slider_section__wrapper:hover .slider_section__slide:nth-child(1),
+	.slider_section__wrapper:active .slider_section__slide:nth-child(1) {
+		width: 16rem;
+		.slider_section__descr_text {
+			display: none;
+		}
+	}
+	
+	.slider_section__wrapper .slider_section__slide:nth-child(1):hover,
+	.slider_section__wrapper .slider_section__slide:nth-child(1):active {
+		width: 57rem;
+		.slider_section__descr_text {
+			display: block;
+		}
+		.slider_section__descr_title {
+			font-size: 2.4rem;
+		}
+	}	
+	.slider_section__title {
+		font-weight: 300;
+		font-size: 3rem;
+	}
+	.slider_section__description {
+		font-size: 1.2rem;
+		line-height: 2rem;
+	}
+	.slider_section__descr {
+		top: 40rem;
+		padding: 6.5rem 1rem 5rem;
+	}
+	.slider_section__descr_title {
+		margin-bottom: 0;
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 2.6rem;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+	}
+	.slider_section__descr_text {
+		display: none;
+	
+		font-size: 1.2rem;
+		line-height: 2.4rem;
+	
+		height: 7rem;
+		margin-bottom: 1.2rem;
+	
+		overflow: hidden;
 	}
 }
