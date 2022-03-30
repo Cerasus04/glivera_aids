@@ -1,21 +1,22 @@
-// .accordion__tab {
-// 	z-index: 100;
-// }
 .slider_section {
 	display: flex;
 	width: 100%;
 	overflow-x: hidden;
 }
-
 .slider_section__slide { /*это как кнопка*/
+	display: flex;
+	width: 100%;
 	height: 100%;
-	background: center center no-repeat blue;
+	background: center center no-repeat $color_bg_inner;
 	background-size: cover;
 }
 .slider_section__item {
+	display: none;
 }
-.slider_section__item--open {
-
+.slider_section__item.active {
+	display: block;
+	min-height: 50rem;
+	width: 100%;
 }
 .slider_section__descr_title {
 	margin-bottom: 1rem;
@@ -24,11 +25,13 @@
 	font-weight: 300;
 	text-transform: uppercase;
 	color: inherit;
-	outline: 1px solid red;
-
 }
 .slider_section__descr {
-	outline: 1px solid blue;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	min-height: 16rem;
+	padding: 0 1rem;
 	color: $white;
 }
 .slider_section__descr_text {
@@ -38,20 +41,17 @@
 	-webkit-line-clamp: 10;
 	overflow: hidden;
 	-webkit-box-orient: vertical;
-	margin-bottom: 5rem;
+	margin-bottom: 8rem;
 	font-family: $font_2;
 	color: inherit;
-	outline: 1px solid green;
-
 }
 .slider_section__link {
-	width: 1rem;
-	height: 1.5rem;
+	margin-bottom: 1rem;
 	align-self: center;
 
 	& .icon {
-		width: 100%;
-		height: 100%;
+		width: 1rem;
+		height: 1.5rem;
 		transform: rotate(90deg);
 	}
 }
@@ -62,18 +62,8 @@
 		min-height: 50rem;
 		overflow-x: hidden;
 	}
-	
-	.slider_section__slide { /*это как кнопка*/
-		// height: 100%;
-		// background: center center no-repeat blue;
-		// background-size: cover;
-	}
-	.slider_section__item {
-	}
-	.slider_section__item--open {
-	
-	}
 	.slider_section__descr {
+		padding: 0 3rem;
 	}
 	.slider_section__descr_title {
 		font-size: 2.4rem;
@@ -81,24 +71,17 @@
 	.slider_section__descr_text {
 		font-size: 2rem;		
 	}
-	.slider_section__link {
-	}
 }
 @include bp($point_2, min) {	
 	.slider_section {
 		min-height: 65rem;
 	}
-	.slider_section__slide { /*это как кнопка*/
-		display: flex;
-		margin-top: auto;
-	}
-	// .slider_section__slide:nth-child(1) {
-	// 	width: 57rem;		
-	// }
 	.slider_section__item {
+		display: block;
 		width: 24rem;
 	}
 	.slider_section__descr {
+		justify-content: flex-start;
 		margin-top: auto;
 		max-width: 16rem;
 		min-height: 16rem;
@@ -141,9 +124,6 @@
 		}
 		.slider_section__descr_text {
 			display: block;
-		}
-		.slider_section__descr_title {
-			font-size: 2.4rem;
 		}
 		.slider_section__link {
 			display: block;
