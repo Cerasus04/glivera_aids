@@ -26,6 +26,9 @@
 }
 
 @include bp($point_4, min) {
+	.slider {
+		margin: 0 auto;
+	}
 	.slider__title {
 		font-size: 5rem;
 		color: inherit;
@@ -42,7 +45,6 @@
 @include bp($point_2, min) {
 	.slider {
 		max-width: $page_width;
-		margin: 0 auto;
 	}
 	.slider__title {
 		width: 75rem;
