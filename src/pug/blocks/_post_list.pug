@@ -1,5 +1,6 @@
 mixin post_list(data)
 	ul.post_list
 		each item in data
-			a.post_list__link
-				+picture(item)
+			li.post_list__item
+				a.post_list__link(href='#')
+					+picture(item)

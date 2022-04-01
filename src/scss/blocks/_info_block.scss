@@ -7,9 +7,13 @@
 .info_block__wrap {
 	width: calc(100% - 3rem);
 	margin: 0 auto;
-	padding: 3rem;
+	padding: 3rem 0;
 	background-color: $color_bg_base;
 	box-shadow: 0.1rem 0.1rem 0.5rem $color_bg_base;
+}
+.info_block__inner {
+	width: 70%;
+	margin: 0 auto; 
 }
 .info_block__subtitle {
 	font-family: $font_1;
@@ -23,7 +27,7 @@
 	align-items: flex-start;
 }
 .info_block__subtitle {
-	padding-bottom: 2rem;
+	margin-bottom: 2rem;
 	font-size: 1.4rem;	
 }
 .info_block__form {
@@ -48,10 +52,11 @@
 	right: 3rem;
 }
 .info_block__link {
-	align-self: center;
+	display: block;
 	font-size: 1rem;
 	color: $white;
 	text-transform: uppercase;
+	text-align: center;
 	cursor: pointer;
 }
 .info_block__links {
@@ -75,6 +80,6 @@
 	.info_block__wrap {
 		width: 89rem;
 		margin: 0 auto;
-		padding: 3rem 13.5rem;
+		padding: 3rem 0;
 	}
 }

@@ -3,7 +3,7 @@ extends ../layout/_layout
 block vars
 	- array = {body_class:'page', layout_mod:'', sub_keywords:'', title_inner:'Aid'}
 block content_block
-	section.slider
+	section.section.slider
 		.slider__text
 			h1.slider__title AIDSinfo
 			p.slider__descr UNAIDS leads the world’s most extensive data collection on HIV epidemiology, programme coverage and finance and publishes the most authoritative and up-to-date information on the HIV epidemic.
@@ -40,35 +40,36 @@ block content_block
 		+controls([
 			{id: '1', current: true},{id: '2'},{id: '3'},{id: '4'},{id: '5'}
 		])
-	section.info_block
+	section.section.info_block
 		h2.visually-hidden Information
 		.info_block__wrap
-			+title({
-				text: 'search data'
-			})
-			.info_block__form
-				+button({
-					el_class: 'info_block__filter',
-					ariaLabel: 'filter button'
+			.info_block__inner
+				+title({
+					text: 'search data'
 				})
-					+icon('filter', '')
-				+button({
-					el_class: 'info_block__search',
-					ariaLabel: 'search button'
-				})
-					+icon('search', '')
-				+form_input({				
-					blockClass: 'form_search',
-					label : true,
-					labelClass : 'visually-hidden',
-					labelText : 'search info',
-					inputType: 'search',
-					elClass: 'form_search__input',
-					id : 'form_search',
-					name : 'search_input',
-					placeholder: 'e.g. HIV prevalence, sex workers, South Africa'
-				})
-			.info_block__descr
+				.info_block__form
+					+button({
+						el_class: 'info_block__filter',
+						ariaLabel: 'filter button'
+					})
+						+icon('filter', '')
+					+button({
+						el_class: 'info_block__search',
+						ariaLabel: 'search button'
+					})
+						+icon('search', '')
+					+form_input({				
+						blockClass: 'form_search',
+						label : true,
+						labelClass : 'visually-hidden',
+						labelText : 'search info',
+						inputType: 'search',
+						elClass: 'form_search__input',
+						id : 'form_search',
+						name : 'search_input',
+						placeholder: 'e.g. HIV prevalence, sex workers, South Africa'
+					})
+				.info_block__descr
 				h3.info_block__subtitle popular searches
 				.info_block__links
 					+links([
@@ -81,20 +82,20 @@ block content_block
 						}
 					])(class='link_list--info')
 				a.info_block__link(href='#') view more				
-	section.posts_block 
+	section.section.posts_block 
 		h2.visually-hidden View popular public
 		.section_in
 			+title({
 				text: 'popular publications'
 			})
 			+post_list([
-				{img: 'public1'},
-				{img: 'public2'},
-				{img: 'public3'},
-				{img: 'public4'}
+				{customClass:'post_list__img',img: 'public1'},
+				{customClass:'post_list__img',img: 'public2'},
+				{customClass:'post_list__img',img: 'public3'},
+				{customClass:'post_list__img',img: 'public4'}
 			])
 			a.posts_block__link(href='#') view all		
-	section.resources_block
+	section.section.resources_block
 		h2.visually-hidden Resources
 		.section_in
 			+title({
@@ -104,8 +105,8 @@ block content_block
 				gl_class: 'resources_block',
 				items: [
 					{title :'<span class="resources_block__text">Core <span class="resources_block__accent">epidemiology</span> slides</span><span class="resources_block__event">July 2020</span>'},
-					{title :'<span class="resources_block__text">Global <span class="resources_block__accent">HIV & AIDS</span> statistics</span><span class="resources_block__event">Global AIDS update 2020</span>'},
 					{title :'<span class="resources_block__text"><span class="resources_block__accent">Seizing</span> the moment</span><span class="resources_block__event">Global AIDS update 2020</span>'},
-					{title :'<span class="resources_block__text"><span class="resources_block__accent">HIV epidemological</span> estimates spreadsheet</span><span class="resources_block__event">1990 - 2019 with uncertainty bounds</span>'},
+					{title :'<span class="resources_block__text">Global <span class="resources_block__accent">HIV & AIDS</span> statistics</span><span class="resources_block__event">Global AIDS update 2020</span>'},
+					{title :'<span class="resources_block__text"><span class="resources_block__accent">HIV epidemological</span> estimates spreadsheet</span><span class="resources_block__event">1990 - 2019 with uncertainty bounds</span>'}
 				]
 			})

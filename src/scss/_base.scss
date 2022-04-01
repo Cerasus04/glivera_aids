@@ -84,6 +84,7 @@ input[type="radio"].visually-hidden {
 }
 //------------------------------------------------------------base styles###
 img {
+	display: block;
   object-fit: contain;
   max-width: 100%;
   width: 100%;

@@ -4,7 +4,7 @@ mixin slider(data)
 			li.slider_section__item.accordion__tab
 				.slider_section__slide(style=`background-image: url(${item.slide})`).accordion__button
 					.slider_section__descr
-						h2.slider_section__descr_title= item.title
+						.slider_section__descr_title= item.title
 						p.slider_section__descr_text= item.descr
 						a(href='#').slider_section__link
 							+icon('arrow_lg')

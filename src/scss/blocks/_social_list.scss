@@ -1,9 +1,14 @@
 .social_list {
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: 1.5rem;
 	justify-content: flex-end;
-	column-gap: 2.5rem;
+}
+.social_list__item {
+	padding-right: 2.5rem;
+
+	&:last-child {
+		padding: 0;
+	}
 }
 .social_list__link {
 	display: block;

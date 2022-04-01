@@ -2,12 +2,13 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1.8rem;
-	margin: 2rem 0;
+	width: 100%;
+	margin: 0 0 2rem;
 }
 @include bp($point_2, min) {
 	.post_list {
 		grid-template-columns: repeat(4, 1fr);
 		order: 1;
-		margin: 2.8rem 0;
+		margin: 0 0 2.8rem;
 	}
 }

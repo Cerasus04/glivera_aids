@@ -4,15 +4,14 @@
 }
 .slider__text {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 3rem;
+	left: 1rem;
 	display: -webkit-box;
 	word-wrap: break-word;
 	word-break: break-word;
 	-webkit-line-clamp: 5;
 	overflow: hidden;
 	-webkit-box-orient: vertical;
-	padding: 3rem 1rem;
 	color: $white;
 	z-index: 10;
 	pointer-events: none;
@@ -39,9 +38,6 @@
 		font-size: 1.5rem;
 		color: inherit;
 	}
-	.slider__text {
-		padding: 5rem 3rem;
-	}
 }
 
 @include bp($point_2, min) {
@@ -57,10 +53,9 @@
 	}
 	.slider__text {
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 9rem;
+		left: 6rem;
 		max-width: 100%;
 		color: $white;
-		padding: 9.6rem 6.6rem;
 	}
 }

@@ -1,22 +1,29 @@
-.resources_block {	
-	padding: 0 0 3rem;
+.resources_block {
 	color: $black;
 }
+.resources_block__list {
+	display: flex;
+	flex-direction: column;
+}
 .resources_block__item {
-	position: relative;
-	padding: 2.8rem 0;
+	padding: 0 2rem 2rem 0;
+	margin-bottom: 1.5rem;
 	border-bottom: 2px solid $color_devider;
 }
 .resources_block__link {
-	display: flex;
-	flex-direction: column;
 	font-size: 1.7rem;
 	font-family: $font_3;
 	color: inherit;
 	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		opacity: 0.8;
+	}
 }
 .resources_block__text {
-	margin-bottom: 1rem;
+	display: block;
 }
 .resources_block__accent {
 	color: $color_accent;
@@ -26,16 +33,26 @@
 }
 
 @include bp($point_2, min) {
+	.resources_block__list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 4rem;
+		align-items: stretch;
+	}
 	.resources_block__item:nth-child(odd) {
+		margin-bottom: 1.5rem;
 		border-bottom: 2px solid $color_devider;
 	}
-	.resources_block__list {
-		column-count: 2;
-		column-gap: 6.6rem;
+	.resources_block__item:nth-child(3) {
+		order: -1;
 	}
 	.resources_block__item {
 		position: relative;
-		padding: 2.8rem 0;
+		width: 48%;
+		padding: 0 4rem 2rem 0;
+		margin-bottom: 0;
 		border-bottom: unset;
 	
 		&::before {
@@ -49,6 +66,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;
+			pointer-events: none;
 		}
 	}
 	.resources_block__link {

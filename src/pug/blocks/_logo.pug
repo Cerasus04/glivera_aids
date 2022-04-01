@@ -8,4 +8,4 @@ mixin logo(data)
 	- altText = data.altText;
 
 	a(class='logo' href=href aria-label=label)&attributes(attributes)
-		img(src=`${assetsImage}${img}.${type}` width=width height=height alt=altText)
+		img(src=`${assetsImage}${img}.${type}` alt=altText)

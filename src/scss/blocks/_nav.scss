@@ -2,34 +2,51 @@
 	display: flex;
 	flex-direction: column;
 	color: $white;
+	margin-bottom: 2rem;
 
 	@include bp($point_2, min) {
 		flex-direction: row;
 		flex-wrap: wrap;	
 	}
 }
+.nav__item:last-child {
+	margin-bottom: 0;
+}
 .nav__list--header {	
 	.nav__item {
-		margin-bottom: 2.4rem;
+		padding: 0 5.5rem 2.4rem 0;
+	}
+	.nav__item:last-child {
+		padding-bottom: 0;
 	}
 	.nav__item {
 		@include bp($point_2, min) {
 			color: $color_text_light;
-			margin-right: 4.5rem;
+			padding-right: 4.5rem;
 			margin-bottom: 0;
+
+			&:last-child {
+				padding-right: 0;
+			}
 		}
 	}
 	.nav__link {
 		letter-spacing: 0.05rem;
 	}
+	@include bp($point_2, min) {
+		margin-right: 4.5rem;
+	}
 }
 .nav__list--bottom {
 	.nav__item {
-		margin-bottom: 2.6rem;
+		padding: 0 5.5rem 2.6rem 0;
 
 		@include bp($point_2, min) {
-			margin-bottom: 0;
+			padding: 0 5.5rem 0 0;
 		}
+	}
+	.nav__item:last-child {
+		margin-bottom: 0;
 	}
 	.nav__link {
 		font-size: 1.2rem;
@@ -43,11 +60,9 @@
 	
 	@include bp($point_2, min) {
 		justify-content: flex-start;
-		column-gap: 5.5rem;
 		color: $black;
 	}
 }
-
 .nav__link {
 	color: inherit;
 	text-transform: uppercase;

@@ -55,6 +55,9 @@
 		transform: rotate(90deg);
 	}
 }
+.slider_section__link:last-child {
+	margin-bottom: 0;
+}
 @include bp($point_4, min) {
 	.slider_section {
 		display: flex;
@@ -78,7 +81,7 @@
 	}
 	.slider_section__item {
 		display: block;
-		width: 24rem;
+		width: 20%;
 	}
 	.slider_section__descr {
 		justify-content: flex-start;
@@ -118,7 +121,7 @@
 		}
 	}
 	.slider_section__item--open {
-		width: 57rem;	
+		width: 47.5%;	
 
 		.slider_section__descr {
 			max-width: 35rem;

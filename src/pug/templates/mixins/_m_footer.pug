@@ -48,9 +48,11 @@ mixin footer
 				})
 		.footer__info
 			.section_in
-				.footer__copyrigh
-					p.footer__copyright_text Copyright © 2020
-					a.footer__copyright_link Unaids
+				ul.footer__copyrigh
+					li.footer__copyrigh_item
+						a.footer__copyright_text(href='#') Copyright © 2020
+					li.footer__copyrigh_item
+						a.footer__copyright_link(href='#') Unaids
 				.footer__violations
 					+links([
 						{

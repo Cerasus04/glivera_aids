@@ -37,8 +37,8 @@
 }
 .header__close_btn {
 	display: none;
-	width: 1.2rem;
-	height: 1.2rem;
+	width: 1.8rem;
+	height: 1.5rem;
 }
 .header__search_btn {
 	width: 3rem;
@@ -109,6 +109,7 @@
 	overflow-y: hidden;
 	display: flex;
 	flex-direction: column;
+	padding-top: 12.5rem;
 
 	.header__logo {
 		display: none;
@@ -120,8 +121,8 @@
 	.header__close_btn {
 		display: block;
 		position: absolute;
-		top: 2.5rem;
-		right: 2.5rem;
+		top: 2rem;
+		right: 4rem;
 	}
 	& .section_in {
 		display: flex;
@@ -130,14 +131,12 @@
 	.header__bottom {
 		display: block;
 		order: -1;
-		padding: 12.5rem 0 0;		
+		padding: 0;		
 	}
 	.header__top {
 		justify-content: flex-start;
-		padding: 0;
-		padding: 1.5rem 0 12rem;
+		padding-top: 2rem;
 	}
-	
 	.header__menu {
 		display: flex;
 		flex-direction: column;
