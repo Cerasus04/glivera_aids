@@ -6,7 +6,8 @@
 
 	@include bp($point_2, min) {
 		flex-direction: row;
-		flex-wrap: wrap;	
+		flex-wrap: wrap;
+		margin-bottom: 0;
 	}
 }
 .nav__item:last-child {
@@ -22,7 +23,7 @@
 	.nav__item {
 		@include bp($point_2, min) {
 			color: $color_text_light;
-			padding-right: 4.5rem;
+			padding: 0 4.5rem 0 0;
 			margin-bottom: 0;
 
 			&:last-child {
@@ -61,6 +62,7 @@
 	@include bp($point_2, min) {
 		justify-content: flex-start;
 		color: $black;
+		margin-bottom: 1rem;
 	}
 }
 .nav__link {

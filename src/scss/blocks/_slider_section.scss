@@ -4,11 +4,18 @@
 	overflow-x: hidden;
 }
 .slider_section__slide { /*это как кнопка*/
+	position: relative;
 	display: flex;
 	width: 100%;
+	height: 100%;	
+}
+.slider_section__img {
+	position: absolute;
+	top: 0;
+	left: 0;
 	height: 100%;
-	background: center center no-repeat $color_bg_inner;
-	background-size: cover;
+	object-fit: cover;
+	z-index: -1;
 }
 .slider_section__item {
 	display: none;
