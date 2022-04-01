@@ -1,4 +1,5 @@
 .resources_block {
+	padding: 0 1.25rem;
 	color: $black;
 }
 .resources_block__list {
@@ -31,8 +32,15 @@
 .resources_block__event {
 	font-size: 1rem;
 }
-
+@include bp($point_4, min) {
+	.resources_block {
+		padding: 0 3rem;
+	}
+}
 @include bp($point_2, min) {
+	.resources_block {
+		padding: 0 6rem;
+	}
 	.resources_block__list {
 		display: flex;
 		flex-direction: row;

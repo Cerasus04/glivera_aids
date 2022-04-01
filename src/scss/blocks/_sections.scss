@@ -7,25 +7,11 @@
 	font-size: 1rem;
 
 	margin: 0 auto;
-	padding: 0 1.25rem;
-
-	@include bp($point_4, min) {
-		padding: 0 3rem;
-	}
-
-	@include bp($point_2, min) {
-		padding: 0 6rem;
-		max-width: $page_width;
-	}
-	
 }
 
 .section_in {
 	width: 100%;
 	margin: 0 auto;
-
-	@include bp($point_4, min) {
-	}
 
 	@include bp($point_2, min) {
 		max-width: $page_width;

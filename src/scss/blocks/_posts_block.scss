@@ -1,5 +1,5 @@
 .posts_block {	
-	padding: 3rem 0;
+	padding: 3rem 1.25rem;
 	min-height: 430px;
   background: linear-gradient(180deg, $color_bg_inner 70%, transparent 50%);
 	color: $black;
@@ -24,7 +24,7 @@
 @include bp($point_4, min) {
 	.posts_block {
 		background: linear-gradient(180deg, $color_bg_inner 50%, transparent 50%);
-		padding: 7rem 0 5rem;
+		padding: 7rem 3rem 5rem;
 	}	
 	.posts_block {
 		.section_in {
@@ -38,5 +38,11 @@
 		font-size: 1.2rem;
 		margin-bottom: 2rem;
 		margin-left: auto;
+	}
+}
+@include bp($point_2, min) {
+	.posts_block {
+		padding-left: 6rem;
+		padding-right: 6rem; 
 	}
 }

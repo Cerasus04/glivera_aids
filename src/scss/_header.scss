@@ -15,7 +15,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1.8rem 0;
+	padding: 1.8rem 1.25rem;
 }
 .header__logo_text {
 	display: none;
@@ -70,7 +70,7 @@
 	}
 	.header__top,
 	.header__bottom {
-		padding: 2rem 0;
+		padding: 2rem 3rem;
 	}
 }
 
@@ -79,7 +79,7 @@
 		border-top: 2px solid $color_accent;
 	}
 	.header__top {
-		padding: 2rem 0 1rem;
+		padding: 2rem 6rem 1rem;
 		border-bottom: 1px solid $color_transparent;
 	}
 	.header__logo_text {
@@ -97,7 +97,7 @@
 	}
 	.header__bottom {
 		display: block;
-		padding: 2rem 0 1rem;
+		padding: 2rem 6rem 1rem;
 	}
 }
 

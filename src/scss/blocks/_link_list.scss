@@ -12,6 +12,10 @@
 
 	.list_link__item {
 		padding-right: 1.5rem;
+
+		&:last-child {
+			padding: 0;
+		}
 	}
 
 	@include bp($point_2, min) {
