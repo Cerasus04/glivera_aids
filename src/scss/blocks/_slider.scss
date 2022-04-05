@@ -41,7 +41,6 @@
 
 	@include bp($point_4, min) {
 		font-size: 5rem;
-		color: inherit;
 	}
 	@include bp($point_2, min) {
 		width: 75rem;

@@ -4,7 +4,7 @@ import { GLOBAL_VARS } from 'utils/constants';
 import { documentReady, pageLoad } from 'utils';
 import pageWidgetInit from './dev_vendors/dev_widget';
 // ------------------- imports###
-import sliderAccordion from './components/accordion';
+// import { slider } from './components/slider';
 // ------------------  import components
 
 // ------------------  import components###
@@ -24,12 +24,12 @@ console.info('%c%s', styles, message);
 // -------------------  global variables
 
 const readyFunc = () => {
-	console.log('ready');
-	sliderAccordion();
+	// console.log('ready');
+	// slider();
 };
 
 const loadFunc = () => {
-	console.log('hello');
+	// console.log('hello');
 };
 
 documentReady(() => {

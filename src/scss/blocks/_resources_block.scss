@@ -23,10 +23,18 @@
 	}
 }
 .resources_block__item {
-	padding: 0 2rem 2rem 0;
-	margin-bottom: 1.5rem;
-	border-bottom: 2px solid $color_devider;
-
+	&:nth-child(odd) {
+		@include bp($point_2, min) {
+			margin-bottom: 1.5rem;
+			border-bottom: 2px solid $color_devider;
+		}		
+	}
+	&:nth-child(3) {
+		@include bp($point_2, min) {
+			order: -1;
+		}
+	}
+	
 	@include bp($point_2, min) {
 		position: relative;
 		width: 48%;
@@ -47,17 +55,15 @@
 			background-size: cover;
 			pointer-events: none;
 		}
-		&:nth-child(odd) {
-			margin-bottom: 1.5rem;
-			border-bottom: 2px solid $color_devider;
-		}
-		&:nth-child(3) {
-			order: -1;
-		}
+	}
+
+	@include bp($point_3) {
+		padding: 0 2rem 2rem 0;
+		margin-bottom: 1.5rem;
+		border-bottom: 2px solid $color_devider;
 	}
 }
 .resources_block__link {
-	font-size: 1.7rem;
 	font-family: $font_3;
 	color: inherit;
 	cursor: pointer;
@@ -67,7 +73,9 @@
 		text-decoration: none;
 		opacity: 0.8;
 	}
-
+	@include bp($point_3) {
+		font-size: 1.7rem;
+	}
 	@include bp($point_2, min) {
 		font-size: 2.5rem;
 	}

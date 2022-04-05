@@ -1,8 +1,8 @@
 mixin slider(data)
-	ul.slider_section.accordion
+	ul.slider_section.sliderSection.swiper-wrapper
 		each item in data.items
-			li.slider_section__item.accordion__tab.sliderSectionItem
-				.slider_section__slide.accordion__button
+			li.slider_section__item.sliderItem.swiper-slide
+				.slider_section__slide
 					+picture({img: item.bg,
 					customClass: item.imgClass})
 					.slider_section__descr
