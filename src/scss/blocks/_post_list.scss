@@ -1,14 +1,15 @@
 .post_list {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
 	gap: 1.8rem;
 	width: 100%;
-	margin: 0 0 2rem;
-}
-@include bp($point_2, min) {
-	.post_list {
+
+	@include bp($point_2, min) {
 		grid-template-columns: repeat(4, 1fr);
 		order: 1;
 		margin: 0 0 2.8rem;
+	}
+	@include bp($point_3) {
+		grid-template-columns: repeat(2, 1fr);
+		margin: 0 0 2rem;
 	}
 }

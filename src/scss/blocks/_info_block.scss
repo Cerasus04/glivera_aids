@@ -3,6 +3,14 @@
 	padding: 2rem 0;
 	background-color: $color_bg_inner;
 	color: $white;
+
+	@include bp($point_4, min) {
+		display: block;
+		padding: 3rem 0;
+	}
+	@include bp($point_2, min) {
+		padding: 3rem 0;
+	}
 }
 .info_block__wrap {
 	width: calc(100% - 3rem);
@@ -10,6 +18,17 @@
 	padding: 3rem 0;
 	background-color: $color_bg_base;
 	box-shadow: 0.1rem 0.1rem 0.5rem $color_bg_base;
+
+	@include bp($point_4, min) {
+		padding: 3rem 6rem;
+		width: calc(100% - 4rem);
+		margin: 3rem auto;
+	}
+	@include bp($point_2, min) {
+		width: 89rem;
+		margin: 0 auto;
+		padding: 3rem 0;
+	}
 }
 .info_block__inner {
 	width: 70%;
@@ -61,25 +80,4 @@
 }
 .info_block__links {
 	margin-bottom: 1.5rem;
-}
-@include bp($point_4, min) {
-	.info_block {
-		display: block;
-		padding: 3rem 0;
-	}
-	.info_block__wrap {
-		padding: 3rem 6rem;
-		width: calc(100% - 4rem);
-		margin: 3rem auto;
-	}
-}
-@include bp($point_2, min) {
-	.info_block {
-		padding: 3rem 0;
-	}
-	.info_block__wrap {
-		width: 89rem;
-		margin: 0 auto;
-		padding: 3rem 0;
-	}
 }

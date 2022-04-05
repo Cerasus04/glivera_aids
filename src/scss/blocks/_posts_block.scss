@@ -3,12 +3,29 @@
 	min-height: 430px;
   background: linear-gradient(180deg, $color_bg_inner 70%, transparent 50%);
 	color: $black;
+
+	@include bp($point_4, min) {
+		padding: 7rem 3rem 5rem;
+		background: linear-gradient(180deg, $color_bg_inner 50%, transparent 50%);
+	}
+
+	@include bp($point_2, min) {
+		padding-left: 6rem;
+		padding-right: 6rem;
+	}
 }
 .posts_block {
 	.section_in {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+
+		@include bp($point_4, min) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;	
+			justify-content: flex-start;
+		}
 	}
 }
 .posts_block__link {
@@ -20,29 +37,10 @@
 	text-transform: uppercase;
 	color: inherit;
 	cursor: pointer;
-}
-@include bp($point_4, min) {
-	.posts_block {
-		background: linear-gradient(180deg, $color_bg_inner 50%, transparent 50%);
-		padding: 7rem 3rem 5rem;
-	}	
-	.posts_block {
-		.section_in {
-			flex-direction: row;
-			flex-wrap: wrap;
-			align-items: center;	
-			justify-content: flex-start;		
-		}
-	}
-	.posts_block__link {
+
+	@include bp($point_4, min) {
 		font-size: 1.2rem;
 		margin-bottom: 2rem;
 		margin-left: auto;
-	}
-}
-@include bp($point_2, min) {
-	.posts_block {
-		padding-left: 6rem;
-		padding-right: 6rem; 
 	}
 }

@@ -12,15 +12,28 @@
 		display: flex;
 		align-items: center;
 	}
+
+	@include bp($point_2, min) {
+		padding: 3.5rem 6rem 2rem;		
+	}
 }
 .footer__logo {
 	display: none;
+
+	@include bp($point_2, min) {
+		display: block;
+	}
 }
 .footer__org_list {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+
+	@include bp($point_2, min) {
+		justify-content: flex-end;
+		align-items: center;
+	}
 }
 .footer__contact {	
 	background-color: $color_bg_footer_light;
@@ -30,6 +43,17 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+	@include bp($point_4, min) {
+		padding: 1.5rem 3rem;
+
+		& .section_in {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+	@include bp($point_2, min) {
+		padding: 2.5rem 6rem;
 	}
 }
 .footer__list {
@@ -43,6 +67,14 @@
 	&:last-child {
 		padding: 0;
 	}
+
+	@include bp($point_4, min) {
+		padding-right: 3.5rem;
+
+		&:last-child {
+			padding: 0;
+		}
+	}
 }
 .footer__link {
 	font-size: 1rem;
@@ -55,20 +87,39 @@
 		opacity: 0.8;
 		text-decoration: none;
 	}
+
+	@include bp($point_2, min) {
+		font-size: 1.2rem;
+		letter-spacing: 0.15rem;
+	}
 }
 .footer__info {
 	padding: 1.5rem 1.25rem;
 	background-color: $color_bg_footer_dark;
-}
-.footer__info {
+
 	& .section_in {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
+
+	@include bp($point_2, min) {
+		& .section_in {
+			flex-direction: row;
+			justify-content: space-between;				
+		}
+	}
+	@include bp($point_2, min) {
+		padding: 2rem 6rem;
+	}
 }
 .footer__list_text {
 	display: none;
+
+	@include bp($point_2, min) {
+		display: block;
+		margin-right: 3.75rem;
+	}
 }
 
 .footer__copyright_link {
@@ -85,61 +136,15 @@
 	flex-wrap: wrap;
 	margin-bottom: 1.5rem;
 	color: $white;
+
+	@include bp($point_4, min) {
+		margin-bottom: 0;
+	}
 }	
 .footer__violations {
 	order: -1;
-}
-@include bp($point_4, min) {
-	.footer__copyright {
-		margin-bottom: 0;
-	}
-	.footer__item {
-		padding-right: 3.5rem;
 
-		&:last-child {
-			padding: 0;
-		} 
-	}
-	.footer__contact {		
-		& .section_in {
-			flex-direction: row;
-			justify-content: space-between;
-		}
-	}
-}
-
-@include bp($point_2, min) {
-	.footer__logo {
-		display: block;
-	}
-	.footer__top {
-		padding: 5rem 6rem 2rem;
-	}
-	.footer__org_list {
-		justify-content: flex-end;
-		align-items: center;
-	}
-	.footer__contact {
-		padding: 2.5rem 6rem;
-	}
-	.footer__link {
-		font-size: 1.2rem;
-		letter-spacing: 0.15rem;
-	}
-	.footer__info {
-		& .section_in {
-			flex-direction: row;
-			justify-content: space-between;				
-		}
-	}
-	.footer__list_text {
-		display: block;
-		margin-right: 3.75rem;
-	}
-	.footer__info {
-		padding: 2rem 6rem;
-	}	
-	.footer__violations {
+	@include bp($point_2, min) {
 		order: 0;
 	}
 }

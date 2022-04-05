@@ -2,8 +2,16 @@
 	position: absolute;
 	left: 0;
 	bottom: 7.5rem;
-	padding: 0 1.25rem;
 	display: flex;
+	padding: 0 1.25rem;
+
+	@include bp($point_4, min) {
+		padding: 0 3rem;
+	}
+
+	@include bp($point_2, min) {
+		display: none;
+	}
 }
 .controls_list__item {
 	margin-right: 0.8rem;
@@ -21,14 +29,4 @@
 .controls_list__btn.current {
 	background-color: $white;
 	opacity: 1;
-}
-@include bp($point_4, min) {
-	.controls_list{
-		padding: 0 3rem;
-	}
-}
-@include bp($point_2, min) {
-	.controls_list{
-		display: none;
-	}
 }

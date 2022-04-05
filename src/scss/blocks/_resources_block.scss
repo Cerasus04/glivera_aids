@@ -1,47 +1,19 @@
 .resources_block {
 	padding: 0 1.25rem;
 	color: $black;
+
+	@include bp($point_4, min) {
+		padding: 0 3rem;
+	}
+	@include bp($point_2, min) {
+		padding: 0 6rem;
+	}
 }
 .resources_block__list {
 	display: flex;
 	flex-direction: column;
-}
-.resources_block__item {
-	padding: 0 2rem 2rem 0;
-	margin-bottom: 1.5rem;
-	border-bottom: 2px solid $color_devider;
-}
-.resources_block__link {
-	font-size: 1.7rem;
-	font-family: $font_3;
-	color: inherit;
-	cursor: pointer;
 
-	&:hover,
-	&:focus {
-		text-decoration: none;
-		opacity: 0.8;
-	}
-}
-.resources_block__text {
-	display: block;
-}
-.resources_block__accent {
-	color: $color_accent;
-}
-.resources_block__event {
-	font-size: 1rem;
-}
-@include bp($point_4, min) {
-	.resources_block {
-		padding: 0 3rem;
-	}
-}
-@include bp($point_2, min) {
-	.resources_block {
-		padding: 0 6rem;
-	}
-	.resources_block__list {
+	@include bp($point_2, min) {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -49,14 +21,13 @@
 		margin-bottom: 4rem;
 		align-items: stretch;
 	}
-	.resources_block__item:nth-child(odd) {
-		margin-bottom: 1.5rem;
-		border-bottom: 2px solid $color_devider;
-	}
-	.resources_block__item:nth-child(3) {
-		order: -1;
-	}
-	.resources_block__item {
+}
+.resources_block__item {
+	padding: 0 2rem 2rem 0;
+	margin-bottom: 1.5rem;
+	border-bottom: 2px solid $color_devider;
+
+	@include bp($point_2, min) {
 		position: relative;
 		width: 48%;
 		padding: 0 4rem 2rem 0;
@@ -76,11 +47,42 @@
 			background-size: cover;
 			pointer-events: none;
 		}
+		&:nth-child(odd) {
+			margin-bottom: 1.5rem;
+			border-bottom: 2px solid $color_devider;
+		}
+		&:nth-child(3) {
+			order: -1;
+		}
 	}
-	.resources_block__link {
+}
+.resources_block__link {
+	font-size: 1.7rem;
+	font-family: $font_3;
+	color: inherit;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		opacity: 0.8;
+	}
+
+	@include bp($point_2, min) {
 		font-size: 2.5rem;
 	}
-	.resources_block__event {
+}
+.resources_block__text {
+	display: block;
+}
+.resources_block__accent {
+	color: $color_accent;
+}
+.resources_block__event {
+	font-size: 1rem;
+
+	@include bp($point_2, min) {
 		font-size: 1.2rem;
 	}
 }
+

@@ -1,8 +1,5 @@
-//------------------------------------------------------------layout
-
-//------------------------------------------------------------layout###
-
 .header {
+	position: relative;
 	width: 100%;
 	margin: 0 auto;
 	font-size: 1rem;
@@ -10,16 +7,34 @@
 	will-change: transform;
 
 	@include z-index(header);
+
+	@include bp($point_2, min) {
+		border-top: 2px solid $color_accent;
+	}
 }
 .header__top {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 1.8rem 1.25rem;
+	
+	@include bp($point_4, min) {
+		padding: 2rem 3rem
+	}
+	@include bp($point_2, min) {
+		padding: 2rem 6rem 1rem;
+		border-bottom: 1px solid $color_transparent;
+	}
 }
 .header__logo_text {
 	display: none;
 	color: $color_text_light;
+
+	@include bp($point_2, min) {
+		display: block;
+		font-size: 1rem;
+		letter-spacing: 0.04rem;
+	}
 }
 .header__mobile_panel {
 	@extend %global_flex_block_row_wrap_flex-end;
@@ -43,62 +58,44 @@
 .header__search_btn {
 	width: 3rem;
 	height: 1.5rem;
-}
 
+	@include bp($point_2, min) {
+		display: none;
+	}
+}
 .header__burger_btn {
 	width: 1.8rem;
 	height: 1.5rem;
+
+	@include bp($point_2, min) {
+		display: none;
+	}
 }
 .header__menu {
 	display: none;
+
+	@include bp($point_2, min) {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 .header__language {
 	position: relative;
 }
-
 .header__bottom {
 	display: none;
 	padding: 1.8rem 0;
+
+	@include bp($point_4, min) {
+		padding: 2rem 3rem;
+	}
+	@include bp($point_2, min) {
+		display: block;
+		padding: 2rem 6rem 1rem;
+	}
 }
 .header__nav {
 	width: 100%;
-}
-
-@include bp($point_4, min) {
-	.header {
-		position: relative;
-	}
-	.header__top,
-	.header__bottom {
-		padding: 2rem 3rem;
-	}
-}
-
-@include bp($point_2, min) {
-	.header {
-		border-top: 2px solid $color_accent;
-	}
-	.header__top {
-		padding: 2rem 6rem 1rem;
-		border-bottom: 1px solid $color_transparent;
-	}
-	.header__logo_text {
-		display: block;
-		font-size: 1rem;
-		letter-spacing: 0.04rem;
-	}
-	.header__search_btn,
-	.header__burger_btn {
-		display: none;
-	}
-	.header__menu {
-		display: flex;
-		justify-content: space-between;
-	}
-	.header__bottom {
-		display: block;
-		padding: 2rem 6rem 1rem;
-	}
 }
 
 //------------------------------------------------------------js
@@ -121,8 +118,13 @@
 	.header__close_btn {
 		display: block;
 		position: absolute;
-		top: 2rem;
-		right: 4rem;
+		top: 1.8rem;
+		right: 1.25rem;
+
+		@include bp($point_4, min) {
+			top: 2rem;
+			right: 3rem;
+		}
 	}
 	& .section_in {
 		display: flex;
@@ -131,7 +133,11 @@
 	.header__bottom {
 		display: block;
 		order: -1;
-		padding: 0;		
+		padding: 0 1.5rem;	
+		
+		@include bp($point_4, min) {
+			padding: 0 3rem;
+		}
 	}
 	.header__top {
 		justify-content: flex-start;

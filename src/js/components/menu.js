@@ -1,8 +1,8 @@
 const menu = () => {
 	// open menu
-	const burger = document.querySelector('.header__burger_btn');
+	const burger = document.querySelector('.headerBurgerBtn');
 	const header = document.querySelector('.header');
-	const closeBtn = document.querySelector('.header__close_btn');
+	const closeBtn = document.querySelector('.headerCloseBtn');
 
 	const openList = () => {
 		header.classList.add('header--open');

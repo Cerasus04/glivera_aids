@@ -4,6 +4,12 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 1rem;
+
+	@include bp($point_4, min) {
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+	}
 }
 .org_list__item {
 	padding-right: 2rem;
@@ -11,21 +17,16 @@
 	&:last-child {
 		padding: 0;
 	}
+
+	@include bp($point_4, min) {
+		padding-right: 5rem;
+	}
 }
 .org_list__link {
 	display: block;
 	width: 6.5rem;
-}
-@include bp($point_4, min) {
-	.org_list {
-		justify-content: center;
-		align-items: center;
-		margin: 0;
-	}
-	.org_list__item {
-		padding-right: 5rem;
-	}
-	.org_list__link {
+
+	@include bp($point_4, min) {
 		width: 8.75rem;
 	}
 }

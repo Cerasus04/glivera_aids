@@ -1,7 +1,7 @@
 mixin slider(data)
 	ul.slider_section.accordion
 		each item in data.items
-			li.slider_section__item.accordion__tab
+			li.slider_section__item.accordion__tab.sliderSectionItem
 				.slider_section__slide.accordion__button
 					+picture({img: item.bg,
 					customClass: item.imgClass})

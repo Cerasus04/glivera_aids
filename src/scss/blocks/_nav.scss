@@ -58,13 +58,14 @@
 			font-size: 1rem;
 		}
 	}
-	
+
 	@include bp($point_2, min) {
 		justify-content: flex-start;
 		color: $black;
 		margin-bottom: 1rem;
 	}
 }
+
 .nav__link {
 	color: inherit;
 	text-transform: uppercase;

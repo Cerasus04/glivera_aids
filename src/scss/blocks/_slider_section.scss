@@ -2,6 +2,16 @@
 	display: flex;
 	width: 100%;
 	overflow-x: hidden;
+
+	@include bp($point_4, min) {
+		display: flex;
+		width: 100%;
+		min-height: 50rem;
+		overflow-x: hidden;
+	}
+	@include bp($point_2, min) {
+		min-height: 65rem;
+	}
 }
 .slider_section__slide { /*это как кнопка*/
 	position: relative;
@@ -19,115 +29,19 @@
 }
 .slider_section__item {
 	display: none;
+
+	@include bp($point_2, min) {
+		display: block;
+		width: 20%;
+	}
 }
 .slider_section__item.active {
 	display: block;
 	min-height: 50rem;
 	width: 100%;
 }
-.slider_section__descr_title {
-	margin-bottom: 1rem;
-	font-family: $font_3;
-	font-size: 1.5rem;
-	font-weight: 300;
-	text-transform: uppercase;
-	color: inherit;
-}
-.slider_section__descr {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	min-height: 16rem;
-	padding: 0 1rem;
-	color: $white;
-}
-.slider_section__descr_text {
-	display: -webkit-box;
-	word-wrap: break-word;
-	word-break: break-word;
-	-webkit-line-clamp: 10;
-	overflow: hidden;
-	-webkit-box-orient: vertical;
-	margin-bottom: 8rem;
-	font-family: $font_2;
-	color: inherit;
-}
-.slider_section__link {
-	margin-bottom: 1rem;
-	align-self: center;
-
-	& .icon {
-		width: 1rem;
-		height: 1.5rem;
-		transform: rotate(90deg);
-	}
-}
-.slider_section__link:last-child {
-	margin-bottom: 0;
-}
-@include bp($point_4, min) {
-	.slider_section {
-		display: flex;
-		width: 100%;
-		min-height: 50rem;
-		overflow-x: hidden;
-	}
-	.slider_section__descr {
-		padding: 0 3rem;
-	}
-	.slider_section__descr_title {
-		font-size: 2.4rem;
-	}
-	.slider_section__descr_text {
-		font-size: 2rem;		
-	}
-}
-@include bp($point_2, min) {	
-	.slider_section {
-		min-height: 65rem;
-	}
-	.slider_section__item {
-		display: block;
-		width: 20%;
-	}
-	.slider_section__descr {
-		justify-content: flex-start;
-		margin-top: auto;
-		max-width: 16rem;
-		min-height: 16rem;
-		padding: 1rem 2rem;
-		pointer-events: none;
-	}
-	.slider_section__descr_title {
-		margin-bottom: 0;
-		font-size: 1.5rem;
-		font-weight: 300;
-		line-height: 2.6rem;
-		letter-spacing: 0.1rem;
-		text-transform: uppercase;
-	}
-	.slider_section__descr_text {
-		display: none;
-	
-		font-size: 1.2rem;
-		line-height: 2.4rem;
-	
-		height: 7rem;
-		margin-bottom: 1.2rem;
-	
-		overflow: hidden;
-	}
-	.slider_section__link {
-		display: none;
-		width: 1.5rem;
-		height: 1rem;
-		align-self: unset;
-	
-		& .icon {
-			transform: unset;
-		}
-	}
-	.slider_section__item--open {
+.slider_section__item--open {
+	@include bp($point_2, min) {
 		width: 47.5%;	
 
 		.slider_section__descr {
@@ -141,6 +55,96 @@
 		}
 		.slider_section__link {
 			display: block;
+		}
+	}
+}
+.slider_section__descr_title {
+	margin-bottom: 1rem;
+	font-family: $font_3;
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: inherit;
+
+	@include bp($point_4, min) {
+		font-size: 2.4rem;
+	}
+	@include bp($point_2, min) {
+		margin-bottom: 0;
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 2.6rem;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+	}
+}
+.slider_section__descr {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 100%;
+	min-height: 16rem;
+	padding: 0 1rem;
+	color: $white;
+
+	@include bp($point_4, min) {
+		padding: 0 3rem;
+	}
+
+	@include bp($point_2, min) {
+		justify-content: flex-start;
+		margin-top: auto;
+		max-width: 16rem;
+		min-height: 16rem;
+		padding: 1rem 2rem;
+		pointer-events: none;
+	}
+}
+.slider_section__descr_text {
+	display: -webkit-box;
+	word-wrap: break-word;
+	word-break: break-word;
+	-webkit-line-clamp: 10;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	margin-bottom: 8rem;
+	font-family: $font_2;
+	color: inherit;
+
+	@include bp($point_4, min) {
+		font-size: 2rem;
+	}
+	@include bp($point_2, min) {
+		display: none;
+		font-size: 1.2rem;
+		line-height: 2.4rem;
+		height: 7rem;
+		margin-bottom: 1.2rem;
+		overflow: hidden;
+	}
+}
+.slider_section__link {
+	margin-bottom: 1rem;
+	align-self: center;
+
+	& .icon {
+		width: 1rem;
+		height: 1.5rem;
+		transform: rotate(90deg);
+	}
+
+	&:last-child {
+		margin-bottom: 1rem;
+	}
+
+	@include bp($point_2, min) {
+		display: none;
+		width: 1.5rem;
+		height: 1rem;
+		align-self: unset;
+	
+		& .icon {
+			transform: unset;
 		}
 	}
 }
