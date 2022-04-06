@@ -3,11 +3,11 @@ extends ../layout/_layout
 block vars
 	- array = {body_class:'page', layout_mod:'', sub_keywords:'', title_inner:'Aid'}
 block content_block
-	section.section.slider
+	section.section.slider.swiper
 		.slider__text
 			h1.slider__title AIDSinfo
 			p.slider__descr UNAIDS leads the world’s most extensive data collection on HIV epidemiology, programme coverage and finance and publishes the most authoritative and up-to-date information on the HIV epidemic.
-		+slider({			
+		+slider({
 			items: [
 				{
 					title: 'Fact sheets',
@@ -40,11 +40,9 @@ block content_block
 					bg: 'slide5',
 					imgClass: 'slider_section__img',
 				},
-			],
+			]
 		})
-		+controls([
-			{id: '1', current: true},{id: '2'},{id: '3'},{id: '4'},{id: '5'}
-		])
+		.section__pagination.swiper-pagination
 	section.section.info_block
 		h2.visually-hidden Information
 		.info_block__wrap
@@ -84,9 +82,15 @@ block content_block
 						textLink: 'Budget for HIV and AIDS programmes from domestic public sources <span>Global</span>'
 						},{
 						textLink: 'Elimination of mother-to-child transmission <span>Asia & Pacific</span>'
+						},{
+						textLink: 'HIV prevalence among sex workers <span>Eastern and Souther Africa</span>'
+						},{
+						textLink: 'Budget for HIV and AIDS programmes from domestic public sources <span>Global</span>'
+						},{
+						textLink: 'Elimination of mother-to-child transmission <span>Asia & Pacific</span>'
 						}
 					])(class='link_list--info')
-				a.info_block__link(href='#') view more				
+				a.info_block__link.infoLink view more				
 	section.section.posts_block 
 		h2.visually-hidden View popular public
 		.section_in

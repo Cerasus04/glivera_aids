@@ -25,14 +25,20 @@
 			color: $color_text_light;
 			padding: 0 4.5rem 0 0;
 			margin-bottom: 0;
-
-			&:last-child {
-				padding-right: 0;
-			}
+		}
+	}
+	.nav__item:last-child {
+		@include bp($point_2, min) {
+			padding-right: 0;
 		}
 	}
 	.nav__link {
 		letter-spacing: 0.05rem;
+		opacity: .7;
+
+		@include bp($point_2, min) {
+			opacity: 1;
+		}
 	}
 	@include bp($point_2, min) {
 		margin-right: 4.5rem;

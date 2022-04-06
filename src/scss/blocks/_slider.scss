@@ -1,13 +1,6 @@
 .slider {
 	position: relative;
 	width: 100%;
-
-	@include bp($point_4, min) {
-		margin: 0 auto;
-	}
-	@include bp($point_2, min) {
-		max-width: $page_width;
-	}
 }
 .slider__text {
 	position: absolute;
@@ -23,40 +16,40 @@
 	z-index: 10;
 	pointer-events: none;
 
-	@include bp($point_4, min) {
-		left: 3rem;
-	}
-	@include bp($point_2, min) {
-		position: absolute;
-		top: 9rem;
-		left: 6rem;
-		max-width: 100%;
-		color: $white;
-	}
+	// @include bp($point_4, min) {
+	// 	left: 3rem;
+	// }
+	// @include bp($point_2, min) {
+	// 	position: absolute;
+	// 	top: 9rem;
+	// 	left: 6rem;
+	// 	max-width: 100%;
+	// 	color: $white;
+	// }
 }
 .slider__title {
 	margin-bottom: 0.8rem;
 	font-size: 3rem;
 	color: inherit;
 
-	@include bp($point_4, min) {
-		font-size: 5rem;
-	}
-	@include bp($point_2, min) {
-		width: 75rem;
-		font-weight: 300;
-	}
+	// @include bp($point_4, min) {
+	// 	font-size: 5rem;
+	// }
+	// @include bp($point_2, min) {
+	// 	width: 75rem;
+	// 	font-weight: 300;
+	// }
 }
 .slider__descr {
 	width: 90%;
 	font-size: 1.2rem;
 	color: inherit;
 
-	@include bp($point_4, min) {
-		font-size: 1.5rem;
-		color: inherit;
-	}
-	@include bp($point_2, min) {
-		width: 62rem;
-	}
+	// @include bp($point_4, min) {
+	// 	font-size: 1.5rem;
+	// 	color: inherit;
+	// }
+	// @include bp($point_2, min) {
+	// 	width: 62rem;
+	// }
 }

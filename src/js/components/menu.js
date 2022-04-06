@@ -1,17 +1,20 @@
 const menu = () => {
 	// open menu
-	const burger = document.querySelector('.headerBurgerBtn');
-	const header = document.querySelector('.header');
-	const closeBtn = document.querySelector('.headerCloseBtn');
+	const page = document.querySelector('.page');
+	const $burger = page.querySelector('.headerBurgerBtn');
+	const header = page.querySelector('.header');
+	const $closeBtn = page.querySelector('.headerCloseBtn');
 
 	const openList = () => {
 		header.classList.add('header--open');
+		page.classList.add('hidden');
 	};
 	const closeList = () => {
 		header.classList.remove('header--open');
+		page.classList.remove('hidden');
 	};
-	burger.addEventListener('click', openList);
-	closeBtn.addEventListener('click', closeList);
+	$burger.addEventListener('click', openList);
+	$closeBtn.addEventListener('click', closeList);
 };
 
-export { menu };
+export default menu;

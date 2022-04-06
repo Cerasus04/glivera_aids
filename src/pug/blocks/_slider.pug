@@ -1,7 +1,7 @@
 mixin slider(data)
-	ul.slider_section.sliderSection.swiper-wrapper
+	ul.slider_section.swiper-wrapper
 		each item in data.items
-			li.slider_section__item.sliderItem.swiper-slide
+			li.slider_section__item.swiper-slide
 				.slider_section__slide
 					+picture({img: item.bg,
 					customClass: item.imgClass})

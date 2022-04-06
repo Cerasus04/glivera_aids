@@ -2,4 +2,4 @@ mixin links(data)
 	ul.link_list&attributes(attributes)
 		each item in data
 			li.list_link__item
-				a.link_list__link !{item.textLink}
+				a.link_list__link(href='#') !{item.textLink}

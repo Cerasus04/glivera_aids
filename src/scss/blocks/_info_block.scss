@@ -31,8 +31,10 @@
 	}
 }
 .info_block__inner {
-	width: 70%;
-	margin: 0 auto; 
+	@include bp($point_2, min) {
+		width: 70%;
+		margin: 0 auto; 
+	}	
 }
 .info_block__subtitle {
 	font-family: $font_1;

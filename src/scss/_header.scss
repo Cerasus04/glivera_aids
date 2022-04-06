@@ -3,7 +3,7 @@
 	width: 100%;
 	margin: 0 auto;
 	font-size: 1rem;
-
+	transition: all .3s ease;
 	will-change: transform;
 
 	@include z-index(header);
@@ -12,6 +12,7 @@
 		border-top: 2px solid $color_accent;
 	}
 }
+
 .header__top {
 	display: flex;
 	align-items: center;
@@ -107,6 +108,7 @@
 	display: flex;
 	flex-direction: column;
 	padding-top: 12.5rem;
+	transform: translate(0, 0);
 
 	.header__logo {
 		display: none;
