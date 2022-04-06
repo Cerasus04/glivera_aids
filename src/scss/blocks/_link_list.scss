@@ -36,13 +36,7 @@
 	}
 }
 .link_list--info {
-	display: -webkit-box;
-	word-wrap: break-word;
-	word-break: break-word;
-	-webkit-line-clamp: 3;
-	overflow: hidden;
-	-webkit-box-orient: vertical;
-	
+		
 	& .link_list__link {
 		position: relative;
 		display: block;

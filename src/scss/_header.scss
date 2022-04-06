@@ -18,10 +18,7 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 1.8rem 1.25rem;
-	
-	@include bp($point_4, min) {
-		padding: 2rem 3rem
-	}
+
 	@include bp($point_2, min) {
 		padding: 2rem 6rem 1rem;
 		border-bottom: 1px solid $color_transparent;
@@ -87,9 +84,6 @@
 	display: none;
 	padding: 1.8rem 0;
 
-	@include bp($point_4, min) {
-		padding: 2rem 3rem;
-	}
 	@include bp($point_2, min) {
 		display: block;
 		padding: 2rem 6rem 1rem;
@@ -123,10 +117,6 @@
 		top: 1.8rem;
 		right: 1.25rem;
 
-		@include bp($point_4, min) {
-			top: 2rem;
-			right: 3rem;
-		}
 	}
 	& .section_in {
 		display: flex;
@@ -136,10 +126,6 @@
 		display: block;
 		order: -1;
 		padding: 0 1.5rem;	
-		
-		@include bp($point_4, min) {
-			padding: 0 3rem;
-		}
 	}
 	.header__top {
 		justify-content: flex-start;

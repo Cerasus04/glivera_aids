@@ -42,33 +42,7 @@ documentReady(() => {
 pageLoad(() => {
 	loadFunc();
 });
-// open menu
-// const page = document.querySelector('.page');
-// const burger = document.querySelector('.header__burger_btn');
-// const header = document.querySelector('.header');
-// const closeBtn = document.querySelector('.header__close_btn');
 
-// const openList = () => {
-// 	header.classList.add('header--open');
-// 	page.classList.add('hidden');
-// };
-// const closeList = () => {
-// 	header.classList.remove('header--open');
-// 	page.classList.remove('hidden');
-// };
-// burger.addEventListener('click', openList);
-// closeBtn.addEventListener('click', closeList);
-
-// const swiper = new Swiper('.swiper', {
-// 	slidesPerView: 1,
-// 	spaceBetween: 1,
-// 	pagination: {
-// 		el: '.swiper-pagination',
-// 		clickable: true,
-// 	},
-// 	breakpoints: {
-// 		1023: {
-// 			slidesPerView: 1,
-// 		},
-// 	},
-// });
+$('.infoLink').on('click', () => {
+	$('.list_link__item:nth-child(n+5)').slideToggle('');
+});

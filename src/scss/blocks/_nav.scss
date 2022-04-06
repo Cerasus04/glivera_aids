@@ -39,6 +39,12 @@
 		@include bp($point_2, min) {
 			opacity: 1;
 		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $color_text_inner;
+		}
 	}
 	@include bp($point_2, min) {
 		margin-right: 4.5rem;
@@ -62,6 +68,12 @@
 		@include bp($point_2, min) {
 			letter-spacing: 0.15rem;
 			font-size: 1rem;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $color_text_inner;
 		}
 	}
 

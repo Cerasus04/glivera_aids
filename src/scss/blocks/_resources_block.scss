@@ -2,9 +2,6 @@
 	padding: 0 1.25rem;
 	color: $black;
 
-	@include bp($point_4, min) {
-		padding: 0 3rem;
-	}
 	@include bp($point_2, min) {
 		padding: 0 6rem;
 	}

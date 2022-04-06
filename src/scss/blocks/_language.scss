@@ -20,6 +20,11 @@
 		color: currentColor;
 	}
 
+	&:hover,
+	&:focus {
+		color: $color_text_inner;
+	}
+
 	@include bp($point_2, min) {
 		color: $color_text_light;
 		opacity: 1;
