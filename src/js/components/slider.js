@@ -12,7 +12,6 @@ const slider = () => {
 	});
 
 	if (windowWidth < 1023) {
-		console.log('зашел проверить');
 		$slider.classList.add('sliderJs');
 		if ($slider.classList.contains('sliderJs')) {
 			$slider.classList.add('swiper');

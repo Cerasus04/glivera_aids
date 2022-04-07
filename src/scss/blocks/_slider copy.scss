@@ -23,7 +23,7 @@
 	@include bp($point_2, min) {
 		top: 9rem;
 		left: 6rem;
-		width: 41%;
+		max-width: 100%;
 		color: $white;
 	}
 }
@@ -33,6 +33,7 @@
 	color: inherit;
 
 	@include bp($point_2, min) {
+		width: 75rem;
 		font-weight: 300;
 	}
 }
@@ -44,6 +45,6 @@
 		width: 90%;
 	}
 	@include bp($point_2, min) {
-		width: 100%;
+		width: 62rem;
 	}
 }
