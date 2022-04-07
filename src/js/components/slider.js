@@ -25,6 +25,7 @@ const slider = () => {
 					el: '.swiper-pagination',
 					clickable: true,
 				},
+				loop: true,
 			});
 		}
 	}
