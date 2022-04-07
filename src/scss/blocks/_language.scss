@@ -3,15 +3,12 @@
 	height: 100%;
 	line-height: 5rem;
 }
-
 .language__btn {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	text-transform: uppercase;
-	color: $white;
 	cursor: pointer;
-	opacity: .7;
 
 	& .icon {
 		width: .8rem; 
@@ -29,6 +26,11 @@
 		color: $color_text_light;
 		opacity: 1;
 	}
+
+	@include bp ($point_3) {
+		color: $white;
+		opacity: .7;
+	}
 }
 
 .language__list {
@@ -42,19 +44,15 @@
 .language__list--visible_mod {
 	display: block;
 }
-
 .language__item {
 	width: 10rem;
 	height: 3rem;
-	line-height: 3rem;
-	
-	background: #F0F0F0;
+	line-height: 3rem;	
+	background: $color_bg_inner;
 }
-
 .language__item--active_mod {
 	display: none;
 }
-
 .language__link {
 	width: 100%;
 	height: 100%;

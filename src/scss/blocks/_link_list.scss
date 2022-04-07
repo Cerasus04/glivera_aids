@@ -13,8 +13,6 @@
 	}
 }
 .link_list--footer {
-	margin-bottom: 2.5rem;
-
 	.list_link__item {
 		padding-right: 1.5rem;
 
@@ -22,7 +20,6 @@
 			padding: 0;
 		}
 	}
-
 	.link_list__link {
 		&:hover,
 		&:focus {
@@ -30,13 +27,14 @@
 			color: $color_text_light;
 		}
 	}
-
 	@include bp($point_2, min) {
 		margin-bottom: 0;
 	}
+	@include bp($point_3) {
+		margin-bottom: 2.5rem;
+	}
 }
-.link_list--info {
-		
+.link_list--info {		
 	& .link_list__link {
 		position: relative;
 		display: block;

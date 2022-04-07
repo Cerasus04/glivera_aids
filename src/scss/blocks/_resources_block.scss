@@ -1,6 +1,9 @@
 .resources_block {
-	padding: 0 1.25rem;
 	color: $black;
+
+	@include bp($point_3) {
+		padding: 0 1.25rem;
+	}
 
 	@include bp($point_2, min) {
 		padding: 0 6rem;
@@ -8,10 +11,11 @@
 }
 .resources_block__list {
 	display: flex;
-	flex-direction: column;
 
+	@include bp($point_3) {
+		flex-direction: column;
+	}
 	@include bp($point_2, min) {
-		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -30,8 +34,7 @@
 		@include bp($point_2, min) {
 			order: -1;
 		}
-	}
-	
+	}	
 	@include bp($point_2, min) {
 		position: relative;
 		width: 48%;
@@ -53,7 +56,6 @@
 			pointer-events: none;
 		}
 	}
-
 	@include bp($point_3) {
 		padding: 0 2rem 2rem 0;
 		margin-bottom: 1.5rem;

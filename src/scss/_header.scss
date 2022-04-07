@@ -17,8 +17,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1.8rem 1.25rem;
 
+	@include bp($point_3) {
+		padding: 1.8rem 1.25rem;
+	}
 	@include bp($point_2, min) {
 		padding: 2rem 6rem 1rem;
 		border-bottom: 1px solid $color_transparent;
@@ -70,8 +72,9 @@
 	}
 }
 .header__menu {
-	display: none;
-
+	@include bp($point_3) {
+		display: none;
+	}
 	@include bp($point_2, min) {
 		display: flex;
 		justify-content: space-between;
@@ -81,9 +84,10 @@
 	position: relative;
 }
 .header__bottom {
-	display: none;
-	padding: 1.8rem 0;
-
+	@include bp($point_3){
+		display: none;
+		padding: 1.8rem 0;
+	}
 	@include bp($point_2, min) {
 		display: block;
 		padding: 2rem 6rem 1rem;

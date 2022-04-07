@@ -1,6 +1,10 @@
 .slider {
 	position: relative;
 	width: 100%;
+
+	@include bp($point_2, min) {
+		max-width: $page_width;
+	}
 }
 .slider__text {
 	position: absolute;
@@ -34,10 +38,12 @@
 	}
 }
 .slider__descr {
-	width: 90%;
 	font-size: 1.2rem;
 	color: inherit;
 
+	@include bp($point_3) {
+		width: 90%;
+	}
 	@include bp($point_2, min) {
 		width: 62rem;
 	}

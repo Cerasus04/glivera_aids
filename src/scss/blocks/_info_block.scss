@@ -1,6 +1,4 @@
 .info_block {
-	display: none;
-	padding: 2rem 0;
 	background-color: $color_bg_inner;
 	color: $white;
 
@@ -8,17 +6,22 @@
 		display: block;
 		padding: 3rem 0;
 	}
+	@include bp($point_3) {
+		display: none;
+		padding: 2rem 0;
+	}
 }
 .info_block__wrap {
-	width: calc(100% - 3rem);
 	margin: 0 auto;
-	padding: 3rem 0;
 	background-color: $color_bg_base;
 	box-shadow: 0.1rem 0.1rem 0.5rem $color_bg_base;
 
 	@include bp($point_2, min) {
 		width: 89rem;
-		margin: 0 auto;
+		padding: 3rem 0;
+	}
+	@include bp($point_3) {
+		width: calc(100% - 3rem);
 		padding: 3rem 0;
 	}
 }
@@ -71,6 +74,12 @@
 	text-transform: uppercase;
 	text-align: center;
 	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $color_text_inner;
+	}
 }
 .info_block__links {
 	margin-bottom: 1.5rem;

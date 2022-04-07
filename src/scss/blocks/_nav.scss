@@ -1,13 +1,15 @@
 .nav__list {
 	display: flex;
-	flex-direction: column;
 	color: $white;
-	margin-bottom: 2rem;
 
 	@include bp($point_2, min) {
 		flex-direction: row;
 		flex-wrap: wrap;
 		margin-bottom: 0;
+	}
+	@include bp($point_3){
+		flex-direction: column;
+		margin-bottom: 2rem;
 	}
 }
 .nav__item:last-child {
@@ -15,12 +17,9 @@
 }
 .nav__list--header {	
 	.nav__item {
-		padding: 0 5.5rem 2.4rem 0;
-	}
-	.nav__item:last-child {
-		padding-bottom: 0;
-	}
-	.nav__item {
+		@include bp($point_3) {
+			padding: 0 5.5rem 2.4rem 0;
+		}
 		@include bp($point_2, min) {
 			color: $color_text_light;
 			padding: 0 4.5rem 0 0;
@@ -28,14 +27,19 @@
 		}
 	}
 	.nav__item:last-child {
+		@include bp($point_3) {
+			padding-bottom: 0;
+		}
 		@include bp($point_2, min) {
 			padding-right: 0;
 		}
 	}
 	.nav__link {
 		letter-spacing: 0.05rem;
-		opacity: .7;
 
+		@include bp($point_3) {
+			opacity: .7;
+		}
 		@include bp($point_2, min) {
 			opacity: 1;
 		}
@@ -52,7 +56,9 @@
 }
 .nav__list--bottom {
 	.nav__item {
-		padding: 0 5.5rem 2.6rem 0;
+		@include bp($point_3) {
+			padding: 0 5.5rem 2.6rem 0;
+		}
 
 		@include bp($point_2, min) {
 			padding: 0 5.5rem 0 0;
@@ -62,8 +68,10 @@
 		margin-bottom: 0;
 	}
 	.nav__link {
-		font-size: 1.2rem;
-		letter-spacing: 0.2rem;
+		@include bp($point_3) {
+			font-size: 1.2rem;
+			letter-spacing: 0.2rem;
+		}		
 
 		@include bp($point_2, min) {
 			letter-spacing: 0.15rem;
