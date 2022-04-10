@@ -44,5 +44,6 @@ pageLoad(() => {
 });
 
 $('.infoLink').on('click', () => {
-	$('.list_link__item:nth-child(n+5)').slideToggle('');
+	$('.list_link__item:nth-child(n+4)').slideToggle('');
+	$('.page').toggleClass('open_popup');
 });

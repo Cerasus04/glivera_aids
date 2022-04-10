@@ -66,10 +66,17 @@
 @include bp($point_2, min) {
 	.slider_section {
 		min-height: 65rem;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
+		align-content: stretch;
 	}
 	.slider_section__item {
-		display: block;
-		min-width: unset;
+		flex: 1 1 20%;
+		transition: all 0.5s;
+		cursor: pointer;
+
 	}
 	.slider_section__link {
 		display: none;
@@ -81,30 +88,10 @@
 			transform: unset;
 		}
 	}
-	.slider_section {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		padding: 0;
-		margin: 0 auto;
-		max-width: $page_width;
-		height: 50rem;
-		overflow: hidden;	
-		color: $white;		
-	}	
-	.slider_section .slider_section__item {
-		position: relative;
-		display: block;
-		flex-grow: 1;
-		width: 14.5%;
-		overflow: hidden;
-		cursor: pointer;
-	}	
 	.slider_section .slider_section__item:hover,
 	.slider_section .slider_section__item:active {
-		width: 45.5%;
-		flex-grow: unset;
-		transition: all 1.5s;
+		flex: 0.000000001 0.00000001 45.55%;
+
 		.slider_section__descr_text {
 			display: block;
 		}
@@ -120,50 +107,7 @@
 			display: block;
 		}
 	}	
-	.slider_section .slider_section__item:nth-child(1) {
-		width: 45.5%;
-		.slider_section__descr_text {
-			display: block;
-		}
-		.slider_section__descr_title {
-			font-size: 2.4rem;
-		}
-		.slider_section__descr {
-			padding: 6.5rem 2.5rem 5rem;
-		}
-		.slider_section__link {
-			display: block;
-		}
-	}	
-	.slider_section:hover .slider_section__item:nth-child(1),
-	.slider_section:active .slider_section__item:nth-child(1) {
-		width: 14.5%;
-		flex-grow: unset;
-		.slider_section__descr_text {
-			display: none;
-		}
-		.slider_section__link {
-			display: none;
-		}
-		.slider_section__descr_title {
-			font-size: 1.5rem;
-		}
-	}	
-	.slider_section .slider_section__item:nth-child(1):hover,
-	.slider_section .slider_section__item:nth-child(1):active {
-		width: 45.5%;
-		flex-grow: unset;
-
-		.slider_section__descr_text {
-			display: block;
-		}
-		.slider_section__descr_title {
-			font-size: 2.4rem;
-		}
-		.slider_section__link {
-			display: block;
-		}
-	}	
+	
 	.slider_section__title {
 		font-weight: 300;
 		font-size: 3rem;
