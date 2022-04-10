@@ -1,7 +1,7 @@
 mixin header
 	header.header
-		.section_in
-			.header__top
+		.header__top
+			.header__top_in.section_in
 				.header__logo
 					+logo({
 						img : 'logo',
@@ -13,23 +13,7 @@ mixin header
 						altText : 'Aid logo'
 					})
 					p.header__logo_text Global dataset on HIV epidemiology and response
-				.header__mobile_panel
-					+button({
-						el_class: 'header__search_btn',
-						ariaLabel: 'Search button'
-					})
-						+icon('search', '')
-					+button({
-						el_class: 'header__burger_btn headerBurgerBtn',
-						ariaLabel: 'Menu open'
-					})
-						+icon('burger', '')
-					+button({
-						el_class: 'header__close_btn headerCloseBtn',
-						ariaLabel: 'Menu close'
-					})
-						+icon('close', '')
-				.header__menu
+				.header__top_nav.desktop_mod
 					+menu({
 						gl_class: 'nav',
 						gl_mod : 'header',
@@ -49,7 +33,8 @@ mixin header
 							gl_class: 'language',
 							items: [{ title: 'english', active: true }, { title: 'ukrainian' }, { title: 'polish' }, { title: 'germany' }],
 						})
-			.header__bottom
+		.header__bottom
+			.header__bottom_in.section_in
 				nav.header__nav.nav
 					+menu({ 
 						gl_class: 'nav',
@@ -62,3 +47,30 @@ mixin header
 							{ title: 'law & policies'},
 						],
 					})
+					if array.header_search !== 'off'
+						a.header__search_btn.desktop_mod.popupSearchBtn(href="#")
+							+icon('search', '')
+				.header__top_nav.mobile_mod
+					+menu({
+						gl_class: 'nav',
+						gl_mod : 'header',
+						items: [
+							{title : 'Indicators catalogue'},
+							{title : 'report builder'}
+						]
+					})
+					.language
+						+button({
+							el_class: 'language__btn',
+							text: 'english',
+							ariaLabel: 'Change language'
+						})
+							+icon('arrow_sm', '')
+						+menu({
+							gl_class: 'language',
+							items: [{ title: 'english', active: true }, { title: 'ukrainian' }, { title: 'polish' }, { title: 'germany' }],
+						})
+		a.header__search_btn.popupSearchBtn(href="#")
+			+icon('search', '')
+		.menu_trigger.menuTrigger
+			span.menu_trigger_decor

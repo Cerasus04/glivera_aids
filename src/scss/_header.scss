@@ -1,15 +1,34 @@
 .header {
-	position: relative;
+	@extend %transition_transform;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	height: $height_header;
 	width: 100%;
-	margin: 0 auto;
+	padding: 0;
 	font-size: 1rem;
-	transition: all .3s ease;
 	will-change: transform;
+	background-color: $white;
 
 	@include z-index(header);
 
 	@include bp($point_2, min) {
-		border-top: 2px solid $color_accent;
+		transition: transform .3s ease;
+		will-change: transform;
+
+		&.scroll_mod {
+			transform: translateY(-8rem);
+		}
+	}
+	@include bp($point_3) {
+		height: 6rem;
+
+		&.scroll_mod {
+			&::after {
+				opacity: 1;
+			}
+		}
 	}
 }
 
@@ -26,6 +45,26 @@
 		border-bottom: 1px solid $color_transparent;
 	}
 }
+.header__top_in {
+	@extend %global_flex_block_row_wrap_flex-start_center;
+
+	height: 100%;
+}
+.header__top_nav.desktop_mod{
+	@include bp($point_2, min) {
+		display: flex;
+		margin-left: auto;
+	}
+	@include bp($point_3) {
+		display: none;
+	}
+}
+.header__top_nav.mobile_mod{
+	@include bp($point_2, min) {
+		display: none;
+	}
+}
+
 .header__logo_text {
 	display: none;
 	color: $color_text_light;
@@ -36,14 +75,11 @@
 		letter-spacing: 0.04rem;
 	}
 }
-.header__mobile_panel {
-	@extend %global_flex_block_row_wrap_flex-end;
-}
 .header__search_btn,
-.header__burger_btn,
-.header__close_btn {
+.header__burger_btn {
 	display: block;
 	margin-left: 1.25rem;
+	color: $white;
 
 	.icon {
 		width: 100%;
@@ -83,10 +119,41 @@
 .header__language {
 	position: relative;
 }
+.header__bottom_in {
+	position: relative;
+}
 .header__bottom {
+	width: 100%;
+
 	@include bp($point_3){
 		display: none;
 		padding: 1.8rem 0;
+
+		@include flex_block(row, wrap, flex-start, center, center);
+
+		z-index: 100;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+
+		height: 100vh;
+		max-height: 100vh;
+		padding: $height_header 3.8rem;
+
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		transform: translateY(-101%);
+
+		transition: transform .3s ease;
+		will-change: transform;
+
+		background-color: $color_accent;
+
+		body.menu_open & {
+			transform: translateY(0);
+		}
 	}
 	@include bp($point_2, min) {
 		display: block;
@@ -99,44 +166,108 @@
 
 //------------------------------------------------------------js
 
-.header--open {	
-	background-color: $color_accent;
-	min-height: 100vh;
-	overflow-y: hidden;
-	display: flex;
-	flex-direction: column;
-	padding-top: 12.5rem;
-	transform: translate(0, 0);
+.header__search_btn {
+	position: absolute;
+	top: 50%;
+	right: 4rem + $gl_mob_indent;
 
-	.header__logo {
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	margin-top: -1rem;
+
+	color: $color_text_light;
+
+	&:focus,
+	&:hover,
+	&:active {
+		@include bp($point_2, min) {
+			color: $color_accent;
+		}
+	}
+
+	@include bp($point_2, min) {
 		display: none;
 	}
-	.header__search_btn,
-	.header__burger_btn {
-		display: none;
-	}
-	.header__close_btn {
-		display: block;
-		position: absolute;
-		top: 1.8rem;
-		right: 1.25rem;
 
+	&.desktop_mod {
+		right: 0;
+
+		@include bp($point_2, min) {
+			display: block;
+		}
+
+		@include bp($point_3) {
+			display: none;
+		}
 	}
-	& .section_in {
-		display: flex;
-		flex-direction: column;
+}
+@mixin user_menu_butt_line {
+	@extend %transition_background;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	margin-top: -1px;
+	background-color: $color_bg_base;
+
+	body.menu_open & {
+		background-color: $white;
 	}
-	.header__bottom {
-		display: block;
-		order: -1;
-		padding: 0 1.5rem;	
+}
+.menu_trigger {
+	z-index: 210;
+	position: absolute;
+	top: 50%;
+	right: 2rem;
+	display: none; // hidden on wide screens
+	height: 1.6rem;
+	width: 2rem;
+	margin-top: -.8rem;
+	text-transform: uppercase;
+
+	color: transparent;
+	cursor: pointer;
+
+	@include bp($point_3) {
+		display: block; // appear on tablets
 	}
-	.header__top {
-		justify-content: flex-start;
-		padding-top: 2rem;
+
+	&:before {
+		content: '';
+		transform: translate(0, -.6rem);
+		transition: all .3s ease;
+
+		@include user_menu_butt_line;
 	}
-	.header__menu {
-		display: flex;
-		flex-direction: column;
+
+	&:after {
+		content: '';
+		transform: translate(0, .6rem);
+		transition: all .3s ease;
+
+		@include user_menu_butt_line;
 	}
+
+	&.active_mod {
+		&:before {
+			transform: (rotate(45deg) translate(0, 0));
+		}
+
+		&:after {
+			transform: (rotate(-45deg) translate(0, 0));
+		}
+	}
+}
+
+.menu_trigger_decor {
+	transition: all .3s ease;
+
+	.active_mod & {
+		opacity: 0;
+		transform: translate(100%, 0);
+	}
+
+	@include user_menu_butt_line;
 }

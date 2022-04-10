@@ -35,6 +35,11 @@ body {
 	@supports (display: grid) {
 		display: block;
 	}
+
+	&.popup_open,
+	&.menu_open {
+		overflow: hidden;
+	}
 }
 
 .wrapper {
@@ -98,4 +103,12 @@ img {
 }
 .hidden {
 	overflow: hidden;
+}
+main {
+	@include bp($point_3) {
+		margin-top: 6rem;
+	}
+	@include bp($point_2,min) {
+		margin-top: 11.2rem;
+	}
 }

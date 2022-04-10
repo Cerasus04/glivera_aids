@@ -57,7 +57,7 @@
 .nav__list--bottom {
 	.nav__item {
 		@include bp($point_3) {
-			padding: 0 0 2.6rem 0;
+			padding: 0 5.5rem 2.6rem 0;
 		}
 
 		@include bp($point_2, min) {
@@ -88,9 +88,10 @@
 	@include bp($point_2, min) {
 		justify-content: flex-start;
 		color: $black;
-		// margin-bottom: 1rem;
+		margin-bottom: 1rem;
 	}
 }
+
 .nav__link {
 	color: inherit;
 	text-transform: uppercase;
