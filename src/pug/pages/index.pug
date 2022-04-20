@@ -90,7 +90,10 @@ block content_block
 						textLink: 'Elimination of mother-to-child transmission <span>Asia & Pacific</span>'
 						}
 					])(class='link_list--info')
-				a.info_block__link.infoLink view more				
+				a.info_block__link.infoLink 
+					span view more
+					span.info_block__icon
+						+icon('arrow_sm', '')
 	section.section.posts_block 
 		h2.visually-hidden View popular public
 		.section_in
@@ -103,7 +106,8 @@ block content_block
 				{customClass:'post_list__img',img: 'public3'},
 				{customClass:'post_list__img',img: 'public4'}
 			])
-			a.posts_block__link(href='#') view all		
+			a.posts_block__link(href='#') view all
+				
 	section.section.resources_block
 		h2.visually-hidden Resources
 		.section_in
